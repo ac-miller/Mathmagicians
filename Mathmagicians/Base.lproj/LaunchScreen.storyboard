@@ -24,12 +24,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Aaron Miller, Mui Clark, Jesse Chan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s60-Zg-YuO">
+                                <rect key="frame" x="87" y="356" width="201" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eks-gH-Zlq" secondAttribute="bottom" constant="319" id="5VC-ow-2ru"/>
+                            <constraint firstItem="s60-Zg-YuO" firstAttribute="top" secondItem="eks-gH-Zlq" secondAttribute="bottom" constant="8" id="5td-te-bvC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s60-Zg-YuO" secondAttribute="bottom" constant="239" id="9HL-aT-ktO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eks-gH-Zlq" secondAttribute="trailing" constant="105" id="Gah-ZK-A20"/>
                             <constraint firstItem="eks-gH-Zlq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="UG6-DP-OOb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s60-Zg-YuO" secondAttribute="trailing" constant="87" id="jaN-wj-xql"/>
+                            <constraint firstItem="s60-Zg-YuO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="of3-Z3-Nsi"/>
                             <constraint firstItem="eks-gH-Zlq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="xMB-qD-hOK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -37,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>
