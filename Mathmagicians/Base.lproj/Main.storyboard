@@ -18,19 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathmagicians" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvQ-jw-c2g">
-                                <rect key="frame" x="53" y="309" width="269" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MATHMAGICIANS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2x-fd-vAe">
+                                <rect key="frame" x="55" y="313" width="264" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uvQ-jw-c2g" secondAttribute="bottom" constant="309" id="2BM-J7-X3O"/>
-                            <constraint firstItem="uvQ-jw-c2g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="UNb-BL-0Mh"/>
-                            <constraint firstItem="uvQ-jw-c2g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="289" id="f0Z-yI-YCJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uvQ-jw-c2g" secondAttribute="trailing" constant="53" id="hFI-L0-bSu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V2x-fd-vAe" secondAttribute="bottom" constant="314" id="9Tx-YG-2j4"/>
+                            <constraint firstItem="V2x-fd-vAe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="EBF-xJ-QHA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V2x-fd-vAe" secondAttribute="trailing" constant="56" id="GME-Dc-WM2"/>
+                            <constraint firstItem="V2x-fd-vAe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="293" id="ftC-Ox-Yev"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
