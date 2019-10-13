@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		409CF27E2352B15B002444EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF27D2352B15B002444EF /* AppDelegate.swift */; };
 		409CF2802352B15B002444EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF27F2352B15B002444EF /* ViewController.swift */; };
-		409CF2832352B15B002444EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2812352B15B002444EF /* Main.storyboard */; };
+		409CF2832352B15B002444EF /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2812352B15B002444EF /* LogIn.storyboard */; };
 		409CF2862352B15B002444EF /* Mathmagicians.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2842352B15B002444EF /* Mathmagicians.xcdatamodeld */; };
 		409CF2882352B15C002444EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2872352B15C002444EF /* Assets.xcassets */; };
 		409CF28B2352B15C002444EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2892352B15C002444EF /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		409CF27A2352B15B002444EF /* Mathmagicians.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathmagicians.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409CF27D2352B15B002444EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		409CF27F2352B15B002444EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		409CF2822352B15B002444EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		409CF2822352B15B002444EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LogIn.storyboard; sourceTree = "<group>"; };
 		409CF2852352B15B002444EF /* Mathmagicians.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mathmagicians.xcdatamodel; sourceTree = "<group>"; };
 		409CF2872352B15C002444EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		409CF28A2352B15C002444EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				409CF27D2352B15B002444EF /* AppDelegate.swift */,
 				409CF27F2352B15B002444EF /* ViewController.swift */,
-				409CF2812352B15B002444EF /* Main.storyboard */,
+				409CF2812352B15B002444EF /* LogIn.storyboard */,
 				409CF2872352B15C002444EF /* Assets.xcassets */,
 				409CF2892352B15C002444EF /* LaunchScreen.storyboard */,
 				409CF28C2352B15C002444EF /* Info.plist */,
@@ -127,7 +127,7 @@
 			files = (
 				409CF28B2352B15C002444EF /* LaunchScreen.storyboard in Resources */,
 				409CF2882352B15C002444EF /* Assets.xcassets in Resources */,
-				409CF2832352B15B002444EF /* Main.storyboard in Resources */,
+				409CF2832352B15B002444EF /* LogIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,12 +147,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		409CF2812352B15B002444EF /* Main.storyboard */ = {
+		409CF2812352B15B002444EF /* LogIn.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				409CF2822352B15B002444EF /* Base */,
 			);
-			name = Main.storyboard;
+			name = LogIn.storyboard;
 			sourceTree = "<group>";
 		};
 		409CF2892352B15C002444EF /* LaunchScreen.storyboard */ = {
