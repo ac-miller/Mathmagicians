@@ -1,0 +1,6 @@
+framework module Pods_Mathmagicians {
+  umbrella header "Pods-Mathmagicians-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		40B404062352E042002A037A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B404052352E042002A037A /* SignUpViewController.swift */; };
 		40B404082352E063002A037A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B404072352E063002A037A /* LoginViewController.swift */; };
 		40B4040A2352E0A0002A037A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B404092352E0A0002A037A /* HomeViewController.swift */; };
+		5B51AC1C2355929700436FDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B51AC1B2355929700436FDC /* GoogleService-Info.plist */; };
+		B0915B737845DD1B4052401F /* Pods_Mathmagicians.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		40B404052352E042002A037A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		40B404072352E063002A037A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		40B404092352E0A0002A037A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5B51AC1B2355929700436FDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		62A2A81153C254CFE4204F99 /* Pods-Mathmagicians.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathmagicians.debug.xcconfig"; path = "Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians.debug.xcconfig"; sourceTree = "<group>"; };
+		A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mathmagicians.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C409C38E5F0D9AE3881F162E /* Pods-Mathmagicians.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathmagicians.release.xcconfig"; path = "Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0915B737845DD1B4052401F /* Pods_Mathmagicians.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		189B31391F9EE25A7B32E1A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		40B403DF2352CED4002A037A = {
 			isa = PBXGroup;
 			children = (
 				40B403EA2352CED4002A037A /* Mathmagicians */,
 				40B403E92352CED4002A037A /* Products */,
+				B4DD9F55D9F406A4936ABB8D /* Pods */,
+				189B31391F9EE25A7B32E1A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +85,7 @@
 				40B403EB2352CED4002A037A /* AppDelegate.swift */,
 				40B403F72352CED4002A037A /* LaunchScreen.storyboard */,
 				40B403FA2352CED4002A037A /* Info.plist */,
+				5B51AC1B2355929700436FDC /* GoogleService-Info.plist */,
 				40B403F22352CED4002A037A /* Mathmagicians.xcdatamodeld */,
 			);
 			path = Mathmagicians;
@@ -92,6 +110,15 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		B4DD9F55D9F406A4936ABB8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62A2A81153C254CFE4204F99 /* Pods-Mathmagicians.debug.xcconfig */,
+				C409C38E5F0D9AE3881F162E /* Pods-Mathmagicians.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40B403FD2352CED4002A037A /* Build configuration list for PBXNativeTarget "Mathmagicians" */;
 			buildPhases = (
+				B0B45D07C01D0467ED134492 /* [CP] Check Pods Manifest.lock */,
 				40B403E42352CED4002A037A /* Sources */,
 				40B403E52352CED4002A037A /* Frameworks */,
 				40B403E62352CED4002A037A /* Resources */,
+				A02DE077F494CBD6F07F22E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +153,7 @@
 				TargetAttributes = {
 					40B403E72352CED4002A037A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -151,12 +181,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B403F92352CED4002A037A /* LaunchScreen.storyboard in Resources */,
+				5B51AC1C2355929700436FDC /* GoogleService-Info.plist in Resources */,
 				40B403F62352CED4002A037A /* Assets.xcassets in Resources */,
 				40B403F12352CED4002A037A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A02DE077F494CBD6F07F22E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0B45D07C01D0467ED134492 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mathmagicians-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40B403E42352CED4002A037A /* Sources */ = {
@@ -312,6 +385,7 @@
 		};
 		40B403FE2352CED4002A037A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62A2A81153C254CFE4204F99 /* Pods-Mathmagicians.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,13 +397,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JesseChan.Mathmagicians;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		40B403FF2352CED4002A037A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C409C38E5F0D9AE3881F162E /* Pods-Mathmagicians.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,7 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JesseChan.Mathmagicians;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
