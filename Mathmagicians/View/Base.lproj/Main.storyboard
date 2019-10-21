@@ -61,7 +61,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="JSb-qv-8xC">
             <objects>
-                <viewController id="Otu-1v-4U7" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController id="Otu-1v-4U7" customClass="SignUpViewController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IYE-Jm-xVT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,13 +69,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lng-IB-veo">
                                 <rect key="frame" x="40" y="104" width="295" height="320.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xOV-Gp-Zbu">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-5S-qc9">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOk-ks-XSQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bx-R1-EVS">
                                         <rect key="frame" x="0.0" y="60" width="295" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -91,7 +91,7 @@
                                         <rect key="frame" x="0.0" y="180" width="295" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znc-9f-apg">
                                         <rect key="frame" x="0.0" y="240" width="295" height="40"/>
@@ -100,8 +100,7 @@
                                         </constraints>
                                         <state key="normal" title="SIGN UP"/>
                                         <connections>
-                                            <action selector="signUpTapped:" destination="Otu-1v-4U7" eventType="touchUpInside" id="Xpq-jz-1Vu"/>
-                                            <segue destination="N1w-8Y-mr9" kind="show" identifier="signedWelcome" id="Gy1-nZ-Afp"/>
+                                            <action selector="signupPressed:" destination="Otu-1v-4U7" eventType="touchUpInside" id="N24-ie-Kyf"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br4-Mg-Rxe">
@@ -112,10 +111,10 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="zOk-ks-XSQ" firstAttribute="height" secondItem="xOV-Gp-Zbu" secondAttribute="height" id="3t0-4V-0YV"/>
-                                    <constraint firstItem="rQH-oU-xLC" firstAttribute="height" secondItem="xOV-Gp-Zbu" secondAttribute="height" id="j7r-ZT-948"/>
-                                    <constraint firstItem="YCY-gN-a5J" firstAttribute="height" secondItem="xOV-Gp-Zbu" secondAttribute="height" id="jkV-KN-DQA"/>
-                                    <constraint firstItem="Znc-9f-apg" firstAttribute="height" secondItem="xOV-Gp-Zbu" secondAttribute="height" id="lrH-XC-tQk"/>
+                                    <constraint firstItem="Znc-9f-apg" firstAttribute="height" secondItem="0bx-R1-EVS" secondAttribute="height" id="Ry3-H5-w91"/>
+                                    <constraint firstItem="Znc-9f-apg" firstAttribute="height" secondItem="YCY-gN-a5J" secondAttribute="height" id="Tb4-IC-zuo"/>
+                                    <constraint firstItem="Znc-9f-apg" firstAttribute="height" secondItem="qvN-5S-qc9" secondAttribute="height" id="WEw-cF-3WL"/>
+                                    <constraint firstItem="Znc-9f-apg" firstAttribute="height" secondItem="rQH-oU-xLC" secondAttribute="height" id="mbS-hd-58k"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -127,6 +126,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qWl-IT-Xed"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="rQH-oU-xLC" id="s0P-OG-zDC"/>
+                        <outlet property="errorLabel" destination="br4-Mg-Rxe" id="Imr-6t-DHs"/>
+                        <outlet property="passwordTextField" destination="YCY-gN-a5J" id="OBL-Ok-JJG"/>
+                        <segue destination="N1w-8Y-mr9" kind="show" identifier="signedSuccess" id="soB-vs-TwO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBM-j1-zxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +140,7 @@
         <!--Home View Controller-->
         <scene sceneID="kv8-qW-lg9">
             <objects>
-                <viewController id="N1w-8Y-mr9" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="N1w-8Y-mr9" customClass="HomeViewController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H9q-uO-3Mv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +167,7 @@
         <!--Login View Controller-->
         <scene sceneID="g8Q-je-rlG">
             <objects>
-                <viewController id="553-XU-YaH" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="553-XU-YaH" customClass="LoginViewController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qOK-HO-ep5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +185,7 @@
                                         <rect key="frame" x="0.0" y="60" width="295" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lq-fN-QOH">
                                         <rect key="frame" x="0.0" y="120" width="295" height="40"/>
@@ -189,7 +194,7 @@
                                         </constraints>
                                         <state key="normal" title="LOGIN"/>
                                         <connections>
-                                            <segue destination="N1w-8Y-mr9" kind="show" identifier="loggedWelcome" id="PsZ-PV-yem"/>
+                                            <action selector="loginPressed:" destination="553-XU-YaH" eventType="touchUpInside" id="7Yw-QO-k7L"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZt-6D-tm8">
@@ -213,6 +218,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WKN-Mu-C94"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="VHe-xr-Tfx" id="90C-71-49r"/>
+                        <outlet property="errorLabel" destination="qZt-6D-tm8" id="teC-Si-35H"/>
+                        <outlet property="passwordTextField" destination="P9m-4u-MNJ" id="kMK-WB-qNK"/>
+                        <segue destination="N1w-8Y-mr9" kind="show" identifier="loginSuccess" id="nJ0-sR-VuV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AI6-AA-ew0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,6 +249,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PsZ-PV-yem"/>
+        <segue reference="nJ0-sR-VuV"/>
     </inferredMetricsTieBreakers>
 </document>
