@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBM-j1-zxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2668" y="-276.61169415292358"/>
+            <point key="canvasLocation" x="2668" y="-295"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="kv8-qW-lg9">
@@ -154,10 +154,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g92-Zi-Jwz">
                                         <rect key="frame" x="0.0" y="30" width="125" height="30"/>
                                         <state key="normal" title="Game Instructions"/>
+                                        <connections>
+                                            <segue destination="sCn-kV-KGu" kind="show" id="wJJ-lN-xgj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-w1-Y4a">
                                         <rect key="frame" x="0.0" y="60" width="125" height="30"/>
                                         <state key="normal" title="Start Game"/>
+                                        <connections>
+                                            <segue destination="jAp-ue-o31" kind="show" id="DkL-Mk-x27"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-vo-CNj">
                                         <rect key="frame" x="0.0" y="90" width="125" height="30"/>
@@ -184,6 +190,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-G5-eh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3484" y="25.637181409295355"/>
+        </scene>
+        <!--Map Explore Controller-->
+        <scene sceneID="9z9-Lq-gRS">
+            <objects>
+                <viewController id="jAp-ue-o31" customClass="MapExploreController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aqy-yR-UyB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="skO-e6-R4U">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-iO-f49">
+                                <rect key="frame" x="309" y="53" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BkK-t1-dU7"/>
+                                    <constraint firstAttribute="height" constant="50" id="NhE-pL-PIN"/>
+                                </constraints>
+                                <state key="normal" image="compass"/>
+                                <connections>
+                                    <action selector="userLocationUpdatedButtonPressed:" destination="jAp-ue-o31" eventType="touchUpInside" id="IOr-5J-T3A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="skO-e6-R4U" firstAttribute="leading" secondItem="Weg-bG-PV9" secondAttribute="leading" id="6iv-tE-nQE"/>
+                            <constraint firstItem="skO-e6-R4U" firstAttribute="top" secondItem="Weg-bG-PV9" secondAttribute="top" id="DvF-gE-PLD"/>
+                            <constraint firstItem="Weg-bG-PV9" firstAttribute="bottom" secondItem="skO-e6-R4U" secondAttribute="bottom" id="MGO-5a-7Wp"/>
+                            <constraint firstItem="Weg-bG-PV9" firstAttribute="trailing" secondItem="mEc-iO-f49" secondAttribute="trailing" constant="16" id="gW9-Qj-ugI"/>
+                            <constraint firstItem="mEc-iO-f49" firstAttribute="top" secondItem="Weg-bG-PV9" secondAttribute="top" constant="9" id="gsE-BP-eAZ"/>
+                            <constraint firstItem="Weg-bG-PV9" firstAttribute="trailing" secondItem="skO-e6-R4U" secondAttribute="trailing" id="hhA-yk-i6Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Weg-bG-PV9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z0G-5L-pNt"/>
+                    <connections>
+                        <outlet property="mapView" destination="skO-e6-R4U" id="uxg-vs-nv2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSd-CZ-iOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4318" y="434"/>
+        </scene>
+        <!--Game Instructions Controller-->
+        <scene sceneID="oRv-5Z-40R">
+            <objects>
+                <viewController id="sCn-kV-KGu" customClass="GameInstructionsController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dHP-ji-7Sa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Wonderful Game Instructions here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-Rj-rMb">
+                                <rect key="frame" x="62" y="316" width="250" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LhJ-j2-rGy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ffN-w4-26z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xq5-bk-8Sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4318" y="-308"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="g8Q-je-rlG">
@@ -267,6 +340,9 @@
             <point key="canvasLocation" x="909.60000000000002" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="compass" width="512" height="512"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nJ0-sR-VuV"/>
     </inferredMetricsTieBreakers>
