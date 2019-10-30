@@ -1,0 +1,378 @@
+[
+  {
+    "QuestionID": 1,
+    "Difficulty": 1,
+    "QuestionText": "2 + 2 =",
+    "Answers": [{
+                    "QuestionID": 1,
+                    "AnswerText": "4",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 1,
+                    "AnswerText": "8",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 1,
+                    "AnswerText": "3",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 1,
+                    "AnswerText": "6",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 2,
+    "Difficulty": 1,
+    "QuestionText": "2 x 3 =",
+    "Answers": [{
+                    "QuestionID": 2,
+                    "AnswerText": "6",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 2,
+                    "AnswerText": "4",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 2,
+                    "AnswerText": "1",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 2,
+                    "AnswerText": "5",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 3,
+    "Difficulty": 1,
+    "QuestionText": "10 ÷ 2 =",
+    "Answers": [{
+                    "QuestionID": 3,
+                    "AnswerText": "5",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 3,
+                    "AnswerText": "8",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 3,
+                    "AnswerText": "12",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 3,
+                    "AnswerText": "2",
+                    "Correct": false
+                }]
+
+  },
+  {
+    "QuestionID": 4,
+    "Difficulty": 1,
+    "QuestionText": "5 x 3 =",
+    "Answers": [{
+                    "QuestionID": 4,
+                    "AnswerText": "15",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 4,
+                    "AnswerText": "8",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 4,
+                    "AnswerText": "2",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 4,
+                    "AnswerText": "12",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 5,
+    "Difficulty": 1,
+    "QuestionText": "12 - 4 =",
+    "Answers": [{
+                    "QuestionID": 5,
+                    "AnswerText": "8",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 5,
+                    "AnswerText": "16",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 5,
+                    "AnswerText": "3",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 5,
+                    "AnswerText": "9",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 6,
+    "Difficulty": 2,
+    "QuestionText": "What kind of angle is 120º?",
+    "Answers": [{
+                    "QuestionID": 6,
+                    "AnswerText": "Obtuse",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 6,
+                    "AnswerText": "Acute",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 6,
+                    "AnswerText": "Right",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 6,
+                    "AnswerText": "Wrong",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 7,
+    "Difficulty": 2,
+    "QuestionText": "How many degrees is half of a right angle?",
+    "Answers": [{
+                    "QuestionID": 7,
+                    "AnswerText": "45º",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 7,
+                    "AnswerText": "90º",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 7,
+                    "AnswerText": "180º",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 7,
+                    "AnswerText": "60º",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 8,
+    "Difficulty": 2,
+    "QuestionText": "7 x 8 =",
+    "Answers": [{
+                    "QuestionID": 8,
+                    "AnswerText": "56",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 8,
+                    "AnswerText": "49",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 8,
+                    "AnswerText": "63",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 8,
+                    "AnswerText": "64",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 9,
+    "Difficulty": 2,
+    "QuestionText": "Round 27 to the nearest multiple of 5",
+    "Answers": [{
+                    "QuestionID": 9,
+                    "AnswerText": "25",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 9,
+                    "AnswerText": "30",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 9,
+                    "AnswerText": "20",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 9,
+                    "AnswerText": "35",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 10,
+    "Difficulty": 2,
+    "QuestionText": "5.12 + 2.56 =",
+    "Answers": [{
+                    "QuestionID": 10,
+                    "AnswerText": "7.68",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 10,
+                    "AnswerText": "5.68",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 10,
+                    "AnswerText": "7.78",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 10,
+                    "AnswerText": "7.64",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 11,
+    "Difficulty": 3,
+    "QuestionText": "4 ^ 2 =",
+    "Answers": [{
+                    "QuestionID": 11,
+                    "AnswerText": "16",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 11,
+                    "AnswerText": "8",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 11,
+                    "AnswerText": "6",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 11,
+                    "AnswerText": "2",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 12,
+    "Difficulty": 3,
+    "QuestionText": "2 ^ 3 =",
+    "Answers": [{
+                    "QuestionID": 12,
+                    "AnswerText": "8",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 12,
+                    "AnswerText": "9",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 12,
+                    "AnswerText": "6",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 12,
+                    "AnswerText": "5",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 13,
+    "Difficulty": 3,
+    "QuestionText": "8(3x + 3)",
+    "Answers": [{
+                    "QuestionID": 13,
+                    "AnswerText": "24x + 24",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 13,
+                    "AnswerText": "24x + 3",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 13,
+                    "AnswerText": "3x + 24",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 13,
+                    "AnswerText": "11x + 11",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 14,
+    "Difficulty": 3,
+    "QuestionText": "(5 + 8x)3",
+    "Answers": [{
+                    "QuestionID": 14,
+                    "AnswerText": "15 + 24x",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 14,
+                    "AnswerText": "15x + 24x",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 14,
+                    "AnswerText": "15 + 24",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 14,
+                    "AnswerText": "15x + 24",
+                    "Correct": false
+                }]
+  },
+  {
+    "QuestionID": 15,
+    "Difficulty": 3,
+    "QuestionText": "(7 + 10x)6",
+    "Answers": [{
+                    "QuestionID": 15,
+                    "AnswerText": "42 + 60x",
+                    "Correct": true
+                },
+                {
+                    "QuestionID": 15,
+                    "AnswerText": "42 + 60",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 15,
+                    "AnswerText": "42x + 60x",
+                    "Correct": false
+                },
+                {
+                    "QuestionID": 15,
+                    "AnswerText": "42x + 60",
+                    "Correct": false
+                }]
+  }
+]

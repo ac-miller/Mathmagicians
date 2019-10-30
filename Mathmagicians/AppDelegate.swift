@@ -15,10 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Questions.plist")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+
+        parseQuestions()
         
         return true
     }
@@ -90,6 +93,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+
+    // MARK - Parsing JSON to Preload Data into plist
+    func parseQuestions() {
+        
+        var questionArray = [Question]()
+        guard let fileUrl = Bundle.main.url(forResource: "questions", withExtension: "json"), let jsonData = try? Data(contentsOf: fileUrl)
+        else {
+            print("Error loading file")
+            return
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            questionArray = try decoder.decode([Question].self, from: jsonData)
+        } catch {
+            print("Error decoding data \(error)")
+            return
+        }
+        
+        let encoder = PropertyListEncoder()
+        do {
+            let encodedData = try encoder.encode(questionArray)
+            try encodedData.write(to: dataFilePath!)
+        } catch {
+            print("Error encoding into plist")
+            return
+        }
+
+        
     }
 
 }
