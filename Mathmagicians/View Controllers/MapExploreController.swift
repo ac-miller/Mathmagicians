@@ -30,6 +30,11 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate {
         self.mapView.setRegion(region, animated: true)
     }
     
+    @IBAction func backpackButtonPressed(_ sender: UIButton) {
+        //sends the user to the backpack screen through segue
+        performSegue(withIdentifier: "backpackSegue", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +57,18 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate {
         }
         
         // Do any additional setup after loading the view, typically from a nib.
+
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     //

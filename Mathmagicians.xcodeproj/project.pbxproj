@@ -22,6 +22,7 @@
 		5B0F93F023660BDB0028D746 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B0F93EF23660BDB0028D746 /* questions.json */; };
 		5B0F93F223660C6B0028D746 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F93F123660C6B0028D746 /* Question.swift */; };
 		5B0F93F423660DF70028D746 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F93F323660DF70028D746 /* Answer.swift */; };
+		5B27C722236BA1F400136FF7 /* BackpackInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27C721236BA1F400136FF7 /* BackpackInventoryViewController.swift */; };
 		5B51AC1C2355929700436FDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B51AC1B2355929700436FDC /* GoogleService-Info.plist */; };
 		B0915B737845DD1B4052401F /* Pods_Mathmagicians.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		5B0F93EF23660BDB0028D746 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		5B0F93F123660C6B0028D746 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5B0F93F323660DF70028D746 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		5B27C721236BA1F400136FF7 /* BackpackInventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackpackInventoryViewController.swift; sourceTree = "<group>"; };
 		5B51AC1B2355929700436FDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62A2A81153C254CFE4204F99 /* Pods-Mathmagicians.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathmagicians.debug.xcconfig"; path = "Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians.debug.xcconfig"; sourceTree = "<group>"; };
 		A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mathmagicians.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				40B403ED2352CED4002A037A /* ViewController.swift */,
 				40161F04236521960004B7C1 /* GameInstructionsController.swift */,
 				40161F06236521AB0004B7C1 /* MapExploreController.swift */,
+				5B27C721236BA1F400136FF7 /* BackpackInventoryViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				40B403EC2352CED4002A037A /* AppDelegate.swift in Sources */,
 				5B0F93F223660C6B0028D746 /* Question.swift in Sources */,
 				40B4040A2352E0A0002A037A /* HomeViewController.swift in Sources */,
+				5B27C722236BA1F400136FF7 /* BackpackInventoryViewController.swift in Sources */,
 				40161F07236521AB0004B7C1 /* MapExploreController.swift in Sources */,
 				40161F05236521960004B7C1 /* GameInstructionsController.swift in Sources */,
 				5B0F93F423660DF70028D746 /* Answer.swift in Sources */,
