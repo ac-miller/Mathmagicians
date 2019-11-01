@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8C-Jp-GIz">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8C-Jp-GIz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lng-IB-veo">
-                                <rect key="frame" x="40" y="84" width="295" height="320.5"/>
+                                <rect key="frame" x="40" y="104" width="295" height="320.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-5S-qc9">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
@@ -199,10 +201,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="skO-e6-R4U">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-iO-f49">
-                                <rect key="frame" x="309" y="53" width="50" height="50"/>
+                                <rect key="frame" x="309" y="73" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="BkK-t1-dU7"/>
                                     <constraint firstAttribute="height" constant="50" id="NhE-pL-PIN"/>
@@ -212,12 +214,25 @@
                                     <action selector="userLocationUpdatedButtonPressed:" destination="jAp-ue-o31" eventType="touchUpInside" id="IOr-5J-T3A"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4Q-EU-8ol">
+                                <rect key="frame" x="153" y="541" width="68" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0ia-4T-dMW"/>
+                                    <constraint firstAttribute="width" constant="68" id="Zxa-7f-13i"/>
+                                </constraints>
+                                <state key="normal" image="backpack"/>
+                                <connections>
+                                    <action selector="backpackButtonPressed:" destination="jAp-ue-o31" eventType="touchUpInside" id="TzV-ds-ZGs"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="skO-e6-R4U" firstAttribute="leading" secondItem="Weg-bG-PV9" secondAttribute="leading" id="6iv-tE-nQE"/>
                             <constraint firstItem="skO-e6-R4U" firstAttribute="top" secondItem="Weg-bG-PV9" secondAttribute="top" id="DvF-gE-PLD"/>
+                            <constraint firstItem="Weg-bG-PV9" firstAttribute="bottom" secondItem="k4Q-EU-8ol" secondAttribute="bottom" constant="56" id="M2L-Y2-8qe"/>
                             <constraint firstItem="Weg-bG-PV9" firstAttribute="bottom" secondItem="skO-e6-R4U" secondAttribute="bottom" id="MGO-5a-7Wp"/>
+                            <constraint firstItem="k4Q-EU-8ol" firstAttribute="leading" secondItem="Weg-bG-PV9" secondAttribute="leading" constant="153" id="cbD-ns-cna"/>
                             <constraint firstItem="Weg-bG-PV9" firstAttribute="trailing" secondItem="mEc-iO-f49" secondAttribute="trailing" constant="16" id="gW9-Qj-ugI"/>
                             <constraint firstItem="mEc-iO-f49" firstAttribute="top" secondItem="Weg-bG-PV9" secondAttribute="top" constant="9" id="gsE-BP-eAZ"/>
                             <constraint firstItem="Weg-bG-PV9" firstAttribute="trailing" secondItem="skO-e6-R4U" secondAttribute="trailing" id="hhA-yk-i6Q"/>
@@ -227,11 +242,28 @@
                     <navigationItem key="navigationItem" id="Z0G-5L-pNt"/>
                     <connections>
                         <outlet property="mapView" destination="skO-e6-R4U" id="uxg-vs-nv2"/>
+                        <segue destination="yus-Ds-B9e" kind="show" identifier="backpackSegue" id="8FU-x2-WXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSd-CZ-iOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4318" y="434"/>
+            <point key="canvasLocation" x="4317.6000000000004" y="433.13343328335833"/>
+        </scene>
+        <!--Beastie Backpack-->
+        <scene sceneID="Nzp-gK-fcL">
+            <objects>
+                <viewController id="yus-Ds-B9e" customClass="BackpackInventoryViewController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t6l-cp-QeR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nFb-XO-Yl6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Beastie Backpack" id="Hpz-a0-jYv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEs-RE-Wrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5312" y="435"/>
         </scene>
         <!--Game Instructions Controller-->
         <scene sceneID="oRv-5Z-40R">
@@ -248,7 +280,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LhJ-j2-rGy"/>
                     </view>
                     <navigationItem key="navigationItem" id="ffN-w4-26z"/>
@@ -266,7 +298,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iCy-kX-IIw">
-                                <rect key="frame" x="40" y="84" width="295" height="200.5"/>
+                                <rect key="frame" x="40" y="104" width="295" height="200.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-xr-Tfx">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
@@ -326,7 +358,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P8C-Jp-GIz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OL0-0W-XFE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -340,6 +372,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backpack" width="96" height="96"/>
         <image name="compass" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
