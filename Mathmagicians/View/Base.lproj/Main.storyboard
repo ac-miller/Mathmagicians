@@ -140,10 +140,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6RL-Mq-IlJ">
-                                <rect key="frame" x="125" y="278" width="125" height="120"/>
+                                <rect key="frame" x="125" y="228.5" width="125" height="160"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-kf-0c3">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iuo-Dc-wUQ"/>
                                         </constraints>
@@ -152,21 +152,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g92-Zi-Jwz">
-                                        <rect key="frame" x="0.0" y="30" width="125" height="30"/>
+                                        <rect key="frame" x="0.0" y="40" width="125" height="40"/>
                                         <state key="normal" title="Game Instructions"/>
                                         <connections>
                                             <segue destination="sCn-kV-KGu" kind="show" id="wJJ-lN-xgj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-w1-Y4a">
-                                        <rect key="frame" x="0.0" y="60" width="125" height="30"/>
+                                        <rect key="frame" x="0.0" y="80" width="125" height="40"/>
                                         <state key="normal" title="Start Game"/>
                                         <connections>
                                             <segue destination="jAp-ue-o31" kind="show" id="DkL-Mk-x27"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-vo-CNj">
-                                        <rect key="frame" x="0.0" y="90" width="125" height="30"/>
+                                        <rect key="frame" x="0.0" y="120" width="125" height="40"/>
                                         <state key="normal" title="Log Out"/>
                                     </button>
                                 </subviews>
@@ -179,7 +179,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6RL-Mq-IlJ" firstAttribute="top" secondItem="MdQ-bw-0GE" secondAttribute="top" constant="234" id="N4G-qC-Fua"/>
                             <constraint firstItem="MdQ-bw-0GE" firstAttribute="trailing" secondItem="6RL-Mq-IlJ" secondAttribute="trailing" constant="125" id="Ptb-Wz-Jxx"/>
                             <constraint firstItem="6RL-Mq-IlJ" firstAttribute="leading" secondItem="MdQ-bw-0GE" secondAttribute="leading" constant="125" id="gVm-B9-MPZ"/>
                             <constraint firstItem="MdQ-bw-0GE" firstAttribute="bottom" secondItem="6RL-Mq-IlJ" secondAttribute="bottom" constant="278.5" id="vhF-Pn-P3u"/>
