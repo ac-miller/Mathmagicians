@@ -17,6 +17,9 @@ class BackpackInventoryViewController: UIViewController {
 
     }
     
+    //need to get beasties caught from firebase or core data
+    //then decode into Beastie object
+    //then display in inventory
 
     /*
     // MARK: - Navigation
