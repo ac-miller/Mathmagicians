@@ -80,15 +80,15 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.setNavigationBarHidden(true, animated: true)
+//    }
+//
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -97,8 +97,9 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         //random number used to randomize spawning of different monsters
         let number = Int.random(in: 1 ..< 4)
         
+        
+        //setting images for user and monsters
         if annotation is MKUserLocation {
-                
             annotationView.image = UIImage(named: "wizard")
         } else if number == 1 {
             annotationView.image = UIImage(named: "easyGreenMonster")
@@ -116,9 +117,39 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         return annotationView
     }
     
+    //to capture monsters that are close enough to user
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        //deselect current annotation so we can click on multiple annotations (monsters)
+        mapView.deselectAnnotation(view.annotation!, animated: true)
+        
+        //if it's the user annotation, then we do nothing
+        if view.annotation! is MKUserLocation {
+            return
+        }
+        
+        //setting distance and if user is close enough to capture
+        let region = MKCoordinateRegion(center: view.annotation!.coordinate, latitudinalMeters: 50, longitudinalMeters: 50)
+        
+        //showing user on map with animation
+        self.mapView.setRegion(region, animated: false)
+        
+        //get user current location to see if user is within the new region of monster to be captured
+        if let coordinate = self.manager.location?.coordinate {
+            
+            if mapView.visibleMapRect.contains(MKMapPoint(coordinate)) {
+                //shows encounter page tapping on a monster close enough
+                let encounter = encounterController()
+                self.present(encounter, animated: true, completion: nil)
+            } else {
+                print("Monster is too far to capture!")
+            }
+        }
+    }
     
     
-    //
+    
+    //setting user map view
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         

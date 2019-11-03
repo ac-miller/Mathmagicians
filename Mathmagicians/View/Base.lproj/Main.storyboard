@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8C-Jp-GIz">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8C-Jp-GIz">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,7 +95,7 @@
                                 <rect key="frame" x="-35" y="-41" width="443" height="747"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lng-IB-veo">
-                                <rect key="frame" x="40" y="104" width="295" height="320.5"/>
+                                <rect key="frame" x="40" y="84" width="295" height="320.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-5S-qc9">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
@@ -242,10 +240,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="skO-e6-R4U">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-iO-f49">
-                                <rect key="frame" x="309" y="73" width="50" height="50"/>
+                                <rect key="frame" x="309" y="53" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="BkK-t1-dU7"/>
                                     <constraint firstAttribute="height" constant="50" id="NhE-pL-PIN"/>
@@ -289,6 +287,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSd-CZ-iOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4317.6000000000004" y="433.13343328335833"/>
+        </scene>
+        <!--Encounter Controller-->
+        <scene sceneID="e2V-R3-hp4">
+            <objects>
+                <viewController id="ks4-Uu-jDD" customClass="encounterController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PEc-Ej-pXE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-nS-jAI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="bottom" secondItem="JjZ-jq-l4X" secondAttribute="bottom" id="6c8-Kh-Mfr"/>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="leading" secondItem="JjZ-jq-l4X" secondAttribute="leading" id="Xal-Lx-ueK"/>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="top" secondItem="JjZ-jq-l4X" secondAttribute="top" id="bdf-eN-KOo"/>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="trailing" secondItem="JjZ-jq-l4X" secondAttribute="trailing" id="tik-Wh-c8M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JjZ-jq-l4X"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="eAO-nS-jAI" id="YVb-Qm-pch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppz-Y4-Chx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4309.6000000000004" y="1201.3493253373315"/>
         </scene>
         <!--Beastie Backpack-->
         <scene sceneID="Nzp-gK-fcL">
@@ -352,7 +379,7 @@
                                 <rect key="frame" x="-35" y="-41" width="443" height="747"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iCy-kX-IIw">
-                                <rect key="frame" x="40" y="104" width="295" height="200.5"/>
+                                <rect key="frame" x="40" y="84" width="295" height="200.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-xr-Tfx">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
@@ -416,7 +443,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P8C-Jp-GIz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OL0-0W-XFE">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
