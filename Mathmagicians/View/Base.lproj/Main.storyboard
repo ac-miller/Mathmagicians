@@ -158,7 +158,7 @@
                         <outlet property="emailTextField" destination="rQH-oU-xLC" id="s0P-OG-zDC"/>
                         <outlet property="errorLabel" destination="br4-Mg-Rxe" id="Imr-6t-DHs"/>
                         <outlet property="passwordTextField" destination="YCY-gN-a5J" id="OBL-Ok-JJG"/>
-                        <segue destination="N1w-8Y-mr9" kind="show" identifier="signedSuccess" id="soB-vs-TwO"/>
+                        <segue destination="jj1-ml-Oq1" kind="show" identifier="signedSuccess" id="2ex-in-0co"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBM-j1-zxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-G5-eh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="25.637181409295355"/>
+            <point key="canvasLocation" x="3505" y="122"/>
         </scene>
         <!--Map Explore Controller-->
         <scene sceneID="9z9-Lq-gRS">
@@ -303,33 +303,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEs-RE-Wrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5312" y="435"/>
-        </scene>
-        <!--Welcome!-->
-        <scene sceneID="oRv-5Z-40R">
-            <objects>
-                <viewController id="sCn-kV-KGu" customClass="GameInstructionsController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dHP-ji-7Sa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightGreen" translatesAutoresizingMaskIntoConstraints="NO" id="kAe-dP-L5E">
-                                <rect key="frame" x="-35" y="-41" width="443" height="747"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kAe-dP-L5E" secondAttribute="trailing" constant="-33" id="5yw-uY-YU9"/>
-                            <constraint firstItem="kAe-dP-L5E" firstAttribute="top" secondItem="dHP-ji-7Sa" secondAttribute="top" constant="-41" id="Gr7-fJ-DL4"/>
-                            <constraint firstAttribute="bottom" secondItem="kAe-dP-L5E" secondAttribute="bottom" constant="-39" id="c6l-kT-ZR0"/>
-                            <constraint firstItem="kAe-dP-L5E" firstAttribute="leading" secondItem="dHP-ji-7Sa" secondAttribute="leading" constant="-35" id="cjk-sl-c2T"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="LhJ-j2-rGy"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Welcome!" id="ffN-w4-26z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xq5-bk-8Sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4170" y="-651"/>
         </scene>
         <!--Instructions Pages Controller-->
         <scene sceneID="CC5-a1-8eX">
@@ -509,6 +482,6 @@
         <image name="lightGreen" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nJ0-sR-VuV"/>
+        <segue reference="P28-uL-xAX"/>
     </inferredMetricsTieBreakers>
 </document>
