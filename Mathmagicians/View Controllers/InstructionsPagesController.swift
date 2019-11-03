@@ -10,7 +10,8 @@ import UIKit
 
 class InstructionsPagesController : UIPageViewController {
     
-    fileprivate lazy var pageCollection : [UIViewController] = {
+    //declared lazy to only load views as needed
+    lazy var pageCollection : [UIViewController] = {
         return [
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct1"),
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct2")
@@ -22,10 +23,10 @@ class InstructionsPagesController : UIPageViewController {
         self.dataSource = self
         self.delegate = self
         
-        
-        if let firstVC = pageCollection.first
+        //have to use if let because first argument is an optional
+        if let initialPage = pageCollection.first
         {
-            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+            setViewControllers([initialPage], direction: .forward, animated: true, completion: nil)
         }
     }
 
@@ -33,8 +34,11 @@ class InstructionsPagesController : UIPageViewController {
 }
 
 extension InstructionsPagesController : UIPageViewControllerDataSource {
+    
+    //sets the previous view controller in the page view controller
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
+        //gets the index of the current page inside of the collection
         guard let pageIndex = pageCollection.firstIndex(of: viewController)
             else {
                 return nil
@@ -44,19 +48,17 @@ extension InstructionsPagesController : UIPageViewControllerDataSource {
         
         guard previousIndex >= 0
             else {
-                return nil
-        }
-        
-        guard pageCollection.count > previousIndex
-            else {
+                //if the previous index is -1, then don't wrap around to the last page
                 return nil
         }
         
         return pageCollection[previousIndex]
     }
     
+    //sets the next view controller in the page view controller
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
+        //gets the index of the current page inside of the collection
         guard let pageIndex = pageCollection.firstIndex(of: viewController)
             else {
                 return nil
