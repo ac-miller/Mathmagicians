@@ -26,6 +26,7 @@
 		5B8663FC236BBC9F00EAC035 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8663FB236BBC9F00EAC035 /* GoogleService-Info.plist */; };
 		5B8663FE236BBDE700EAC035 /* Beastie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8663FD236BBDE700EAC035 /* Beastie.swift */; };
 		5B866400236BC13300EAC035 /* beasties.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B8663FF236BC13300EAC035 /* beasties.json */; };
+		5BC7B244236F4F7D00E01686 /* InstructionsPagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */; };
 		B0915B737845DD1B4052401F /* Pods_Mathmagicians.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		5B8663FB236BBC9F00EAC035 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B8663FD236BBDE700EAC035 /* Beastie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beastie.swift; sourceTree = "<group>"; };
 		5B8663FF236BC13300EAC035 /* beasties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beasties.json; sourceTree = "<group>"; };
+		5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPagesController.swift; sourceTree = "<group>"; };
 		62A2A81153C254CFE4204F99 /* Pods-Mathmagicians.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathmagicians.debug.xcconfig"; path = "Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians.debug.xcconfig"; sourceTree = "<group>"; };
 		A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mathmagicians.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C409C38E5F0D9AE3881F162E /* Pods-Mathmagicians.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathmagicians.release.xcconfig"; path = "Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				40161F04236521960004B7C1 /* GameInstructionsController.swift */,
 				40161F06236521AB0004B7C1 /* MapExploreController.swift */,
 				5B27C721236BA1F400136FF7 /* BackpackInventoryViewController.swift */,
+				5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				40B403F42352CED4002A037A /* Mathmagicians.xcdatamodeld in Sources */,
 				40B403EE2352CED4002A037A /* ViewController.swift in Sources */,
+				5BC7B244236F4F7D00E01686 /* InstructionsPagesController.swift in Sources */,
 				40B404062352E042002A037A /* SignUpViewController.swift in Sources */,
 				40B404082352E063002A037A /* LoginViewController.swift in Sources */,
 				40B403EC2352CED4002A037A /* AppDelegate.swift in Sources */,
