@@ -129,24 +129,22 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         }
         
         //setting distance and if user is close enough to capture
-        let region = MKCoordinateRegion(center: view.annotation!.coordinate, latitudinalMeters: 50, longitudinalMeters: 50)
+        let region = MKCoordinateRegion(center: view.annotation!.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         
         //showing user on map with animation
         self.mapView.setRegion(region, animated: false)
         
         //get user current location to see if user is within the new region of monster to be captured
-//        if let coordinate = self.manager.location?.coordinate {
-//
-//            if mapView.visibleMapRect.contains(MKMapPoint(coordinate)) {
-//                //shows encounter page tapping on a monster close enough
-//                let encounter = encounterController()
-//                self.present(encounter, animated: true, completion: nil)
-//
-//            } else {
-//                print("Monster is too far to capture!")
-//            }
-//        }
-        performSegue(withIdentifier: "initiateEncounter", sender: nil)
+        if let coordinate = self.manager.location?.coordinate {
+
+            if mapView.visibleMapRect.contains(MKMapPoint(coordinate)) {
+                //shows encounter page tapping on a monster close enough
+                performSegue(withIdentifier: "initiateEncounter", sender: nil)
+            } else {
+                print("Monster is too far to capture!")
+            }
+        }
+
     }
     
     

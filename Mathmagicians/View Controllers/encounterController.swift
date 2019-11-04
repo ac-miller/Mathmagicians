@@ -8,6 +8,7 @@
 
 import UIKit
 import ARKit
+import SceneKit
 
 class encounterController: UIViewController, ARSCNViewDelegate {
 
@@ -44,5 +45,20 @@ class encounterController: UIViewController, ARSCNViewDelegate {
 
         sceneView.scene.rootNode.addChildNode(beastieNode)
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        
+        sceneView.session.run(configuration)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        sceneView.session.pause()
     }
 }
