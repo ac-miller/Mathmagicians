@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,11 +19,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="C9s-b6-jU2">
                                 <rect key="frame" x="-35" y="-41" width="443" height="747"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Created by Aaron Miller, Mui Clark, Jesse Chan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s60-Zg-YuO">
-                                <rect key="frame" x="8" y="422" width="359" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7VP-j9-4Fs"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Aaron Miller, Mui Clark, Jesse Chan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s60-Zg-YuO">
+                                <rect key="frame" x="8" y="422" width="357" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,9 +34,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="s60-Zg-YuO" firstAttribute="centerX" secondItem="eks-gH-Zlq" secondAttribute="centerX" id="2g5-sA-HdC"/>
                             <constraint firstItem="C9s-b6-jU2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-41" id="53H-OY-ZV7"/>
                             <constraint firstAttribute="trailing" secondItem="C9s-b6-jU2" secondAttribute="trailing" constant="-33" id="6pX-jm-6gk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s60-Zg-YuO" secondAttribute="trailing" constant="10" id="89a-VE-D2Y"/>
+                            <constraint firstItem="s60-Zg-YuO" firstAttribute="top" secondItem="eks-gH-Zlq" secondAttribute="bottom" constant="73.5" id="Vcd-UC-Lmx"/>
                             <constraint firstItem="C9s-b6-jU2" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-35" id="bUu-gX-Q9T"/>
                             <constraint firstItem="eks-gH-Zlq" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iZa-nP-Lge"/>
                             <constraint firstAttribute="bottom" secondItem="C9s-b6-jU2" secondAttribute="bottom" constant="-39" id="kZk-CU-oTz"/>
