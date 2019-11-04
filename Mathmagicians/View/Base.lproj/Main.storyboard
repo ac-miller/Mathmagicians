@@ -282,11 +282,42 @@
                     <connections>
                         <outlet property="mapView" destination="skO-e6-R4U" id="uxg-vs-nv2"/>
                         <segue destination="yus-Ds-B9e" kind="show" identifier="backpackSegue" id="8FU-x2-WXM"/>
+                        <segue destination="ks4-Uu-jDD" kind="presentation" identifier="initiateEncounter" id="pPy-7f-EuP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSd-CZ-iOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4317.6000000000004" y="433.13343328335833"/>
+        </scene>
+        <!--Encounter Controller-->
+        <scene sceneID="e2V-R3-hp4">
+            <objects>
+                <viewController id="ks4-Uu-jDD" customClass="encounterController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PEc-Ej-pXE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-nS-jAI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="bottom" secondItem="JjZ-jq-l4X" secondAttribute="bottom" id="6c8-Kh-Mfr"/>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="leading" secondItem="JjZ-jq-l4X" secondAttribute="leading" id="Xal-Lx-ueK"/>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="top" secondItem="JjZ-jq-l4X" secondAttribute="top" id="bdf-eN-KOo"/>
+                            <constraint firstItem="eAO-nS-jAI" firstAttribute="trailing" secondItem="JjZ-jq-l4X" secondAttribute="trailing" id="tik-Wh-c8M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JjZ-jq-l4X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lcL-Qs-kfu"/>
+                    <connections>
+                        <outlet property="sceneView" destination="eAO-nS-jAI" id="YVb-Qm-pch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppz-Y4-Chx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4309.6000000000004" y="1201.3493253373315"/>
         </scene>
         <!--Beastie Backpack-->
         <scene sceneID="Nzp-gK-fcL">
