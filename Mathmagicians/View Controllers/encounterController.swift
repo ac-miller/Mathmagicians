@@ -41,7 +41,7 @@ class encounterController: UIViewController, ARSCNViewDelegate {
             return
         }
 
-        beastieNode.position = SCNVector3(x: 0, y: 0, z: 0)
+        beastieNode.position = SCNVector3(x: 0, y: 0.1, z: -0.2)
 
         sceneView.scene.rootNode.addChildNode(beastieNode)
 
