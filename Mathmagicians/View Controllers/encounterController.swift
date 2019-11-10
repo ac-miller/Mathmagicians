@@ -16,6 +16,14 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var countdownLbl: UILabel!
     
+    @IBOutlet var questionLabel: UILabel!
+    
+    @IBOutlet var answerA: UILabel!
+    
+    //for question/answers
+    let dataFilePath = FileManager.default.urls(for .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("")
+    let data = Data(contentsOf: dataFilePath!)
+    var correctAnswer : String?
     
     //for timer functionality
     var countDown = 15
@@ -48,11 +56,27 @@ class encounterController: UIViewController, ARSCNViewDelegate {
 
         sceneView.scene = scene
         
+        showQuestion()
+        
         //start timer
         startCountDown()
         
         addBeastie()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    //styles questions and answers, and populates
+    func showQuestion() {
+        
+        
+        
+    }
+    
+    //function to style the labels
+    func styleBoxes() {
+        questionLabel?.layer.cornerRadius = 6
+        questionLabel?.layer.masksToBounds = true
+        
     }
     
     //func to initialize timer
