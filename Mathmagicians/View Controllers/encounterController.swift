@@ -9,6 +9,7 @@
 import UIKit
 import ARKit
 import SceneKit
+import Firebase
 
 class encounterController: UIViewController, ARSCNViewDelegate {
 
@@ -22,7 +23,9 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var answerC: UIButton!
     @IBOutlet var answerD: UIButton!
     
-
+    //for cloud storage
+    var ref = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
     
     //for question/answers
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Questions.plist")
@@ -32,7 +35,6 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     //for timer functionality
     var countDown = 15
     var timer = Timer()
-    
     
     //for alert code when user runs out of time
     func createAlert (title: String, message: String){
@@ -107,6 +109,11 @@ class encounterController: UIViewController, ARSCNViewDelegate {
             //display success message
             createAlert(title: "SUCCESS!", message: "You got that one right!")
             //add to inventory
+            let beastie = ["beastie": "dragon",
+                           "question": questionLabel.text,
+                           "answer": correctAnswer]
+
+            self.ref.child("users/\(userID!)/beasties").setValue(beastie)
         }
         else {
             //display failure message
