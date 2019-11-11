@@ -9,6 +9,7 @@
 import UIKit
 import ARKit
 import SceneKit
+import SwiftUI
 
 class encounterController: UIViewController, ARSCNViewDelegate {
 
@@ -38,10 +39,9 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     func createAlert (title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in self.performSegue(withIdentifier:
-            "backToMap", sender: self)
-            
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in self.dismiss(animated: true, completion: nil)
         }))
+        
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -131,7 +131,9 @@ class encounterController: UIViewController, ARSCNViewDelegate {
             timer.invalidate()
             createAlert(title: "MATHMAGICIAN, YOU RAN OUT OF TIME!", message: "We're taking you back to the map")
             
-            performSegue(withIdentifier: "backToMap", sender: nil)
+            
+            //duplicate segue function
+            //performSegue(withIdentifier: "backToMap", sender: nil)
         }
     }
     
