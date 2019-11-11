@@ -17,12 +17,16 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var countdownLbl: UILabel!
     
     @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var answerA: UIButton!
+    @IBOutlet var answerB: UIButton!
+    @IBOutlet var answerC: UIButton!
+    @IBOutlet var answerD: UIButton!
     
-    @IBOutlet var answerA: UILabel!
+
     
     //for question/answers
-    let dataFilePath = FileManager.default.urls(for .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("")
-    let data = Data(contentsOf: dataFilePath!)
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Questions.plist")
+    var questionArray = [Question]()
     var correctAnswer : String?
     
     //for timer functionality
@@ -67,17 +71,49 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     
     //styles questions and answers, and populates
     func showQuestion() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                questionArray = try decoder.decode([Question].self, from: data)
+            } catch {
+                print("Error decoding questions from plist")
+            }
+        }
         
+        let questionIndex = Int.random(in: 0 ..< questionArray.count)
         
+        questionLabel.text = questionArray[questionIndex].questionText
+        
+        showAnswers(for: questionArray[questionIndex])
+        
+    }
+    func showAnswers(for ques: Question) {
+        //sets which answer is true
+        for answer in ques.answers! {
+            if answer.correct == true {
+                correctAnswer = answer.answerText
+            }
+        }
+        answerA.setTitle(ques.answers![0].answerText, for: .normal)
+        answerB.setTitle(ques.answers![1].answerText, for: .normal)
+        answerC.setTitle(ques.answers![2].answerText, for: .normal)
+        answerD.setTitle(ques.answers![3].answerText, for: .normal)
         
     }
     
-    //function to style the labels
-    func styleBoxes() {
-        questionLabel?.layer.cornerRadius = 6
-        questionLabel?.layer.masksToBounds = true
-        
+    
+    @IBAction func testCorrect(_ sender: UIButton) {
+        if (sender.currentTitle == correctAnswer) {
+            //display success message
+            createAlert(title: "SUCCESS!", message: "You got that one right!")
+            //add to inventory
+        }
+        else {
+            //display failure message
+            createAlert(title: "OH NO!", message: "The correct answer is \(correctAnswer ?? "not displayed")")
+        }
     }
+    
     
     //func to initialize timer
     func startCountDown(){
