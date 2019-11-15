@@ -1,32 +1,14 @@
 [
-    {
-        "Difficulty": 1,
-        "Name": "Drago",
-        "Model": "dragon"
+    {   //TODO put actual paths for difficulty level (by index)
+        "imageOnMap": "easyGreenMonster",
+        "arImagePath": "cat"
     },
     {
-        "Difficulty": 1,
-        "Name": "Smeagol",
-        "Model": "alien"
+        "imageOnMap": "mediumBlueMonster",
+        "arImagePath": "scary"
     },
     {
-        "Difficulty": 2,
-        "Name": "Lilly",
-        "Model": "frog"
-    },
-    {
-        "Difficulty": 2,
-        "Name": "Viz",
-        "Model": "eye"
-    },
-    {
-        "Difficulty": 3,
-        "Name": "Protek",
-        "Model": "shield"
-    },
-    {
-        "Difficulty": 3,
-        "Name": "Smog",
-        "Model": "dragon"
+        "imageOnMap": "hardRedMonster",
+        "arImagePath": "dragon"
     }
 ]

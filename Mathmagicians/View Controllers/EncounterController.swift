@@ -11,7 +11,7 @@ import ARKit
 import SceneKit
 import Firebase
 
-class encounterController: UIViewController, ARSCNViewDelegate {
+class EncounterController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     
@@ -31,6 +31,7 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Questions.plist")
     var questionArray = [Question]()
     var correctAnswer : String?
+    var beastie : Beastie?
     
     //for timer functionality
     var countDown = 15
@@ -50,8 +51,7 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     
     
     override func viewDidLoad() {
-        
-        
+       
         super.viewDidLoad()
 
         sceneView.delegate = self
@@ -144,13 +144,11 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     
     func addBeastie(){
 
-        guard let beastieScene = SCNScene(named: "art.scnassets/dragon.scn") else{
-            return
-        }
-
-        guard let beastieNode = beastieScene.rootNode.childNode(withName: "dragon", recursively: false) else{
-            return
-        }
+        var beastiePath = beastie?.arImagePath!
+        
+        let beastieScene = SCNScene(named: "art.scnassets/", inDirectory: beastiePath)
+        
+        let beastieNode = beastieScene.rootNode.childNode(withName: beastie?.arImagePath, recursively: false)
 
         beastieNode.position = SCNVector3(x: 0, y: 0.1, z: -0.2)
 
