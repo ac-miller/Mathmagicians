@@ -9,27 +9,22 @@
 import Foundation
 
 class Beastie : Codable {
-    var difficulty: Int16?
-    var name: String?
-    var model: String?
+    var imageOnMap: String?
+    var arImagePath: String?
     
     enum CodingKeys: String, CodingKey {
-        case difficulty = "Difficulty"
-        case name = "Name"
-        case model = "Model"
+        case imageOnMap = "imageOnMap"
+        case arImagePath = "arImagePath"
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.difficulty = try container.decode(Int16.self, forKey: .difficulty)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.model = try container.decode(String.self, forKey: .model)
-        
+        self.imageOnMap = try container.decode(String.self, forKey: .imageOnMap)
+        self.arImagePath = try container.decode(String.self, forKey: .arImagePath)
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.difficulty, forKey: .difficulty)
-        try container.encode(self.name, forKey: .name)
-        try container.encode(self.model, forKey: .model)
+        try container.encode(self.imageOnMap, forKey: .imageOnMap)
+        try container.encode(self.arImagePath, forKey: .arImagePath)
     }
 }

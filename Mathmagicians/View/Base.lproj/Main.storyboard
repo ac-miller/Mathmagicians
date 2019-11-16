@@ -292,7 +292,7 @@
         <!--Encounter Controller-->
         <scene sceneID="e2V-R3-hp4">
             <objects>
-                <viewController id="ks4-Uu-jDD" customClass="encounterController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ks4-Uu-jDD" customClass="EncounterController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEc-Ej-pXE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -652,7 +652,7 @@
         <image name="lightGreen" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P28-uL-xAX"/>
+        <segue reference="2ex-in-0co"/>
         <segue reference="91t-CV-v3N"/>
     </inferredMetricsTieBreakers>
 </document>

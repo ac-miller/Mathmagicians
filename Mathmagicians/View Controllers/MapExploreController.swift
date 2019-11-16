@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 
+extension String: Error{}
+
 //locationManagerDelegate takes care of all of user location info
 class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -16,6 +18,9 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
     
     //variable to solve problem of having to update user location all the time, this can pose a strainage on the battery, we don't need to update the user location every second; setting to 0 initially
     var update = 0
+    var beasties = [Beastie]()
+    var beastie : Beastie?  //to be determined when user selects a beastie
+    let beastiesJsonPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Model/beasties.json")
     
     //everytime we create a delegate, we want to create a manager variable
     var manager = CLLocationManager()
@@ -35,6 +40,25 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         performSegue(withIdentifier: "backpackSegue", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is EncounterController
+        {
+            let vc = segue.destination as? EncounterController
+            vc?.beastie = beastie
+        }
+    }
+    
+    func readBeasties() throws -> [Beastie] {
+        guard
+            let fileUrl = Bundle.main.url(forResource: "beasties", withExtension: "json"),
+            let jsonData =
+                try? Data(contentsOf: fileUrl)
+                else {
+                    throw "Error loading file"
+                }
+        return try! JSONDecoder().decode([Beastie].self, from: jsonData)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +68,8 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         //setting up location authorization status
         //if the authorization status has been set, then we are clear to show user location on the map
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            
+            beasties = try! readBeasties()
             
             self.mapView.delegate = self
             
@@ -95,19 +121,24 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
         
         //random number used to randomize spawning of different monsters
-        let number = Int.random(in: 1 ..< 4)
+       let difficulty = Int.random(in: 0 ..< 3)
+        
+        
         
         
         //setting images for user and monsters
         if annotation is MKUserLocation {
             annotationView.image = UIImage(named: "wizard")
-        } else if number == 1 {
-            annotationView.image = UIImage(named: "easyGreenMonster")
-        } else if number == 2 {
-            annotationView.image = UIImage(named: "mediumBlueMonster")
         } else {
-            annotationView.image = UIImage(named: "hardRedMonster")
+            beastie = beasties[difficulty]
+            annotationView.image = UIImage(named: beastie!.imageOnMap!)
         }
+//            annotationView.image = UIImage(named: "easyGreenMonster")
+//        } else if difficulty == 2 {
+//            annotationView.image = UIImage(named: "mediumBlueMonster")
+//        } else {
+//            annotationView.image = UIImage(named: "hardRedMonster")
+//        }
         
         var newFrame = annotationView.frame
         newFrame.size.height = 40
