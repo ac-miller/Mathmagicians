@@ -67,6 +67,7 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
         //start timer
         startCountDown()
         
+       
         addBeastie()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -109,11 +110,11 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
             //display success message
             createAlert(title: "SUCCESS!", message: "You got that one right!")
             //add to inventory
-            let beastie = ["beastie": "dragon",
+            let beastieToShow = ["beastie": beastie!.arImagePath!,
                            "question": questionLabel.text,
                            "answer": correctAnswer]
 
-            self.ref.child("users/\(userID!)/beasties").setValue(beastie)
+            self.ref.child("users/\(userID!)/beasties").setValue(beastieToShow)
         }
         else {
             //display failure message
@@ -144,15 +145,15 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
     
     func addBeastie(){
 
-        var beastiePath = beastie?.arImagePath!
+        var beastiePath = beastie!.arImagePath
         
-        let beastieScene = SCNScene(named: "art.scnassets/", inDirectory: beastiePath)
+        let beastieScene = SCNScene(named: beastiePath! + ".scn", inDirectory: "art.scnassets/")
         
-        let beastieNode = beastieScene.rootNode.childNode(withName: beastie?.arImagePath, recursively: false)
+        let beastieNode = beastieScene!.rootNode.childNode(withName: beastiePath!, recursively: false)
 
-        beastieNode.position = SCNVector3(x: 0, y: 0.1, z: -0.2)
+        beastieNode!.position = SCNVector3(x: 0, y: 0.1, z: -0.2)
 
-        sceneView.scene.rootNode.addChildNode(beastieNode)
+        sceneView.scene.rootNode.addChildNode(beastieNode!)
 
     }
     

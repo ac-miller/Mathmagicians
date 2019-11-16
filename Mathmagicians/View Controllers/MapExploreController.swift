@@ -121,7 +121,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
         
         //random number used to randomize spawning of different monsters
-       let difficulty = Int.random(in: 1 ..< 4)
+       let difficulty = Int.random(in: 0 ..< 3)
         
         
         
@@ -130,7 +130,8 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         if annotation is MKUserLocation {
             annotationView.image = UIImage(named: "wizard")
         } else {
-            annotationView.image = UIImage(named: beasties[difficulty].imageOnMap!)
+            beastie = beasties[difficulty]
+            annotationView.image = UIImage(named: beastie!.imageOnMap!)
         }
 //            annotationView.image = UIImage(named: "easyGreenMonster")
 //        } else if difficulty == 2 {

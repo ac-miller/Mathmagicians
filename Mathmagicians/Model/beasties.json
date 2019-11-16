@@ -1,6 +1,5 @@
 [
-    {   //TODO put actual paths for difficulty level (by index)
-        "imageOnMap": "easyGreenMonster",
+    {   "imageOnMap": "easyGreenMonster",
         "arImagePath": "cat"
     },
     {
