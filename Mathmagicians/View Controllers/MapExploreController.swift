@@ -54,7 +54,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
             
             
             //randomly placing annotation on the map (annotation represents monsters)
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
+            Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { (timer) in
                 
                 if let coordinate = self.manager.location?.coordinate {
                     
