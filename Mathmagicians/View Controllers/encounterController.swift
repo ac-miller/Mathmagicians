@@ -9,6 +9,9 @@
 import UIKit
 import ARKit
 import SceneKit
+import SwiftUI
+import Firebase
+
 
 class encounterController: UIViewController, ARSCNViewDelegate {
 
@@ -16,20 +19,32 @@ class encounterController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var countdownLbl: UILabel!
     
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var answerA: UIButton!
+    @IBOutlet var answerB: UIButton!
+    @IBOutlet var answerC: UIButton!
+    @IBOutlet var answerD: UIButton!
+    
+    //for cloud storage
+    var ref = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
+    
+    //for question/answers
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Questions.plist")
+    var questionArray = [Question]()
+    var correctAnswer : String?
     
     //for timer functionality
     var countDown = 15
     var timer = Timer()
     
-    
     //for alert code when user runs out of time
     func createAlert (title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in self.performSegue(withIdentifier:
-            "backToMap", sender: self)
-            
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in self.dismiss(animated: true, completion: nil)
         }))
+        
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -48,12 +63,65 @@ class encounterController: UIViewController, ARSCNViewDelegate {
 
         sceneView.scene = scene
         
+        showQuestion()
+        
         //start timer
         startCountDown()
         
         addBeastie()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    //styles questions and answers, and populates
+    func showQuestion() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                questionArray = try decoder.decode([Question].self, from: data)
+            } catch {
+                print("Error decoding questions from plist")
+            }
+        }
+        
+        let questionIndex = Int.random(in: 0 ..< questionArray.count)
+        
+        questionLabel.text = questionArray[questionIndex].questionText
+        
+        showAnswers(for: questionArray[questionIndex])
+        
+    }
+    func showAnswers(for ques: Question) {
+        //sets which answer is true
+        for answer in ques.answers! {
+            if answer.correct == true {
+                correctAnswer = answer.answerText
+            }
+        }
+        answerA.setTitle(ques.answers![0].answerText, for: .normal)
+        answerB.setTitle(ques.answers![1].answerText, for: .normal)
+        answerC.setTitle(ques.answers![2].answerText, for: .normal)
+        answerD.setTitle(ques.answers![3].answerText, for: .normal)
+        
+    }
+    
+    
+    @IBAction func testCorrect(_ sender: UIButton) {
+        if (sender.currentTitle == correctAnswer) {
+            //display success message
+            createAlert(title: "SUCCESS!", message: "You got that one right!")
+            //add to inventory
+            let beastie = ["beastie": "dragon",
+                           "question": questionLabel.text,
+                           "answer": correctAnswer]
+
+            self.ref.child("users/\(userID!)/beasties").setValue(beastie)
+        }
+        else {
+            //display failure message
+            createAlert(title: "OH NO!", message: "The correct answer is \(correctAnswer ?? "not displayed")")
+        }
+    }
+    
     
     //func to initialize timer
     func startCountDown(){
@@ -71,7 +139,9 @@ class encounterController: UIViewController, ARSCNViewDelegate {
             timer.invalidate()
             createAlert(title: "MATHMAGICIAN, YOU RAN OUT OF TIME!", message: "We're taking you back to the map")
             
-            performSegue(withIdentifier: "backToMap", sender: nil)
+            
+            //duplicate segue function
+            //performSegue(withIdentifier: "backToMap", sender: nil)
         }
     }
     
