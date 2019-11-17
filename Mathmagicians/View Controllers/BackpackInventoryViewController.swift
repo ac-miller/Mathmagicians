@@ -11,6 +11,9 @@ import Firebase
 
 class BackpackInventoryViewController: UIViewController {
 
+    let userID = Auth.auth().currentUser?.uid
+    var ref = Database.database().reference()
+    
     var beasties: [BackpackCell] = [
         BackpackCell(beastie: "dragon", question: "1+1", answer: "2"),
         BackpackCell(beastie: "cat", question: "2+2", answer: "4"),
@@ -22,12 +25,32 @@ class BackpackInventoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        retrieveData()
         beastieTable.dataSource = self
         beastieTable.register(UINib(nibName: "BeastieBackpackCell", bundle: nil), forCellReuseIdentifier: "BeastieCell")
-
     }
     
-    //need to get beasties caught from firebase or core data
+//    func retrieveData() {
+//        let childRef = self.ref.child("users/\(userID!)/beasties")
+//        childRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//          // Get user value
+//            for child in snapshot.children {
+//                let newBeastie = BackpackCell(beastie: child.beastie, question: child.question, answer: child.answer)
+//                if let dbLocation = childSnapshot.value["LocationName"] as? String {
+//                    print(dbLocation)
+//                }
+//            }
+//
+//          // ...
+//          }) { (error) in
+//            print(error.localizedDescription)
+//        }
+//
+//
+//    }
+    
+    
+
 
 }
 

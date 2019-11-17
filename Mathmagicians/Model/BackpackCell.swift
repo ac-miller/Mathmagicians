@@ -12,4 +12,5 @@ struct BackpackCell {
     let beastie: String //asset name
     let question: String
     let answer: String
+
 }
