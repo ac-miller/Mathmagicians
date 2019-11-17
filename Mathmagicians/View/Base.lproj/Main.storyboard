@@ -443,14 +443,24 @@
                     <view key="view" contentMode="scaleToFill" id="t6l-cp-QeR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-3b-sve">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nFb-XO-Yl6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Beastie Backpack" id="Hpz-a0-jYv"/>
+                    <connections>
+                        <outlet property="beastieTable" destination="PkZ-3b-sve" id="vVw-Fd-w20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEs-RE-Wrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5312" y="435"/>
+            <point key="canvasLocation" x="5311.1999999999998" y="434.93253373313348"/>
         </scene>
         <!--Instructions Pages Controller-->
         <scene sceneID="CC5-a1-8eX">
