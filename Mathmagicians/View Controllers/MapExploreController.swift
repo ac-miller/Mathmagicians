@@ -171,6 +171,10 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
             if mapView.visibleMapRect.contains(MKMapPoint(coordinate)) {
                 //shows encounter page tapping on a monster close enough
                 performSegue(withIdentifier: "initiateEncounter", sender: nil)
+                
+                //removes monster from map after engaging in the encounter page
+                self.mapView.removeAnnotation(view.annotation!)
+                
             } else {
                 print("Monster is too far to capture!")
             }
