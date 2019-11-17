@@ -11,7 +11,7 @@
 		40161F05236521960004B7C1 /* GameInstructionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40161F04236521960004B7C1 /* GameInstructionsController.swift */; };
 		40161F07236521AB0004B7C1 /* MapExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40161F06236521AB0004B7C1 /* MapExploreController.swift */; };
 		408B60EA236E469C007A6D4B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 408B60E9236E469C007A6D4B /* art.scnassets */; };
-		408B60EC236F7CE3007A6D4B /* encounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B60EB236F7CE3007A6D4B /* encounterController.swift */; };
+		408B60EC236F7CE3007A6D4B /* EncounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B60EB236F7CE3007A6D4B /* EncounterController.swift */; };
 		408B60F0236F91DE007A6D4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 408B60EF236F91DE007A6D4B /* GoogleService-Info.plist */; };
 		40B403EC2352CED4002A037A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B403EB2352CED4002A037A /* AppDelegate.swift */; };
 		40B403EE2352CED4002A037A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B403ED2352CED4002A037A /* ViewController.swift */; };
@@ -38,7 +38,7 @@
 		40161F04236521960004B7C1 /* GameInstructionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInstructionsController.swift; sourceTree = "<group>"; };
 		40161F06236521AB0004B7C1 /* MapExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExploreController.swift; sourceTree = "<group>"; };
 		408B60E9236E469C007A6D4B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		408B60EB236F7CE3007A6D4B /* encounterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encounterController.swift; sourceTree = "<group>"; };
+		408B60EB236F7CE3007A6D4B /* EncounterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterController.swift; sourceTree = "<group>"; };
 		408B60EF236F91DE007A6D4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40B403E82352CED4002A037A /* Mathmagicians.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathmagicians.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B403EB2352CED4002A037A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				40161F06236521AB0004B7C1 /* MapExploreController.swift */,
 				5B27C721236BA1F400136FF7 /* BackpackInventoryViewController.swift */,
 				5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */,
-				408B60EB236F7CE3007A6D4B /* encounterController.swift */,
+				408B60EB236F7CE3007A6D4B /* EncounterController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				40B404082352E063002A037A /* LoginViewController.swift in Sources */,
 				40B403EC2352CED4002A037A /* AppDelegate.swift in Sources */,
 				5B8663FE236BBDE700EAC035 /* Beastie.swift in Sources */,
-				408B60EC236F7CE3007A6D4B /* encounterController.swift in Sources */,
+				408B60EC236F7CE3007A6D4B /* EncounterController.swift in Sources */,
 				5B0F93F223660C6B0028D746 /* Question.swift in Sources */,
 				40B4040A2352E0A0002A037A /* HomeViewController.swift in Sources */,
 				5B27C722236BA1F400136FF7 /* BackpackInventoryViewController.swift in Sources */,

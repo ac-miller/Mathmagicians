@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -25,5 +26,14 @@ class HomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    @IBAction func logOutPressed(_ sender: Any) {
+        
+        try! Auth.auth().signOut()
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as! UINavigationController
+            self.present(vc, animated: false, completion: nil)
+        }
+        
+    }
     
 }
