@@ -28,11 +28,15 @@ class HomeViewController: UIViewController {
     
     @IBAction func logOutPressed(_ sender: Any) {
         
-        try! Auth.auth().signOut()
-        if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as! UINavigationController
-            self.present(vc, animated: false, completion: nil)
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
         }
+        catch let soError as NSError {
+            print ("Error during signout: %@", soError)
+        }
+        
+        
         
     }
     
