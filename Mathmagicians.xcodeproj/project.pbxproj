@@ -28,6 +28,9 @@
 		5B27C722236BA1F400136FF7 /* BackpackInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27C721236BA1F400136FF7 /* BackpackInventoryViewController.swift */; };
 		5B8663FE236BBDE700EAC035 /* Beastie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8663FD236BBDE700EAC035 /* Beastie.swift */; };
 		5B866400236BC13300EAC035 /* beasties.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B8663FF236BC13300EAC035 /* beasties.json */; };
+		5B88F5322381F572005E59B5 /* BackpackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88F5312381F572005E59B5 /* BackpackCell.swift */; };
+		5B88F5352381FB5C005E59B5 /* BeastieBackpackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88F5332381FB5C005E59B5 /* BeastieBackpackCell.swift */; };
+		5B88F5362381FB5C005E59B5 /* BeastieBackpackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88F5342381FB5C005E59B5 /* BeastieBackpackCell.xib */; };
 		5BC7B244236F4F7D00E01686 /* InstructionsPagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */; };
 		5BC7B248236F8DBA00E01686 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC7B247236F8DBA00E01686 /* ARKit.framework */; };
 		B0915B737845DD1B4052401F /* Pods_Mathmagicians.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */; };
@@ -57,6 +60,9 @@
 		5B27C721236BA1F400136FF7 /* BackpackInventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackpackInventoryViewController.swift; sourceTree = "<group>"; };
 		5B8663FD236BBDE700EAC035 /* Beastie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beastie.swift; sourceTree = "<group>"; };
 		5B8663FF236BC13300EAC035 /* beasties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beasties.json; sourceTree = "<group>"; };
+		5B88F5312381F572005E59B5 /* BackpackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackpackCell.swift; sourceTree = "<group>"; };
+		5B88F5332381FB5C005E59B5 /* BeastieBackpackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastieBackpackCell.swift; sourceTree = "<group>"; };
+		5B88F5342381FB5C005E59B5 /* BeastieBackpackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeastieBackpackCell.xib; sourceTree = "<group>"; };
 		5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPagesController.swift; sourceTree = "<group>"; };
 		5BC7B247236F8DBA00E01686 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		62A2A81153C254CFE4204F99 /* Pods-Mathmagicians.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathmagicians.debug.xcconfig"; path = "Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				40B403EF2352CED4002A037A /* Main.storyboard */,
+				5B88F5332381FB5C005E59B5 /* BeastieBackpackCell.swift */,
+				5B88F5342381FB5C005E59B5 /* BeastieBackpackCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 				5B0F93F123660C6B0028D746 /* Question.swift */,
 				5B0F93F323660DF70028D746 /* Answer.swift */,
 				5B8663FD236BBDE700EAC035 /* Beastie.swift */,
+				5B88F5312381F572005E59B5 /* BackpackCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				5B866400236BC13300EAC035 /* beasties.json in Resources */,
 				408B60EA236E469C007A6D4B /* art.scnassets in Resources */,
 				5B0F93F023660BDB0028D746 /* questions.json in Resources */,
+				5B88F5362381FB5C005E59B5 /* BeastieBackpackCell.xib in Resources */,
 				40B403F12352CED4002A037A /* Main.storyboard in Resources */,
 				40B2EC492380D2A7008BD740 /* GoogleService-Info.plist in Resources */,
 			);
@@ -289,12 +299,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B403F42352CED4002A037A /* Mathmagicians.xcdatamodeld in Sources */,
+				5B88F5352381FB5C005E59B5 /* BeastieBackpackCell.swift in Sources */,
 				40B403EE2352CED4002A037A /* ViewController.swift in Sources */,
 				5BC7B244236F4F7D00E01686 /* InstructionsPagesController.swift in Sources */,
 				40B404062352E042002A037A /* SignUpViewController.swift in Sources */,
 				40B404082352E063002A037A /* LoginViewController.swift in Sources */,
 				40B403EC2352CED4002A037A /* AppDelegate.swift in Sources */,
 				5B8663FE236BBDE700EAC035 /* Beastie.swift in Sources */,
+				5B88F5322381F572005E59B5 /* BackpackCell.swift in Sources */,
 				408B60EC236F7CE3007A6D4B /* EncounterController.swift in Sources */,
 				5B0F93F223660C6B0028D746 /* Question.swift in Sources */,
 				40B4040A2352E0A0002A037A /* HomeViewController.swift in Sources */,

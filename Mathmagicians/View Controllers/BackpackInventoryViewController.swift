@@ -7,28 +7,59 @@
 //
 
 import UIKit
+import Firebase
 
 class BackpackInventoryViewController: UIViewController {
 
+    let userID = Auth.auth().currentUser?.uid
+    var ref = Database.database().reference()
+    
+    var beasties: [BackpackCell] = [BackpackCell]()
+    
+    @IBOutlet var beastieTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loaded backpack")
-        // Do any additional setup after loading the view.
+        
+        retrieveData()
+        beastieTable.dataSource = self
+        beastieTable.register(UINib(nibName: "BeastieBackpackCell", bundle: nil), forCellReuseIdentifier: "BeastieCell")
+
 
     }
     
-    //need to get beasties caught from firebase or core data
-    //then decode into Beastie object
-    //then display in inventory
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func retrieveData() {
+        
+        let childRef = self.ref.child("users/\(userID!)/beasties/")
+        
+        childRef.observe(.childAdded) { (snapshot) in
+            let snapVal = snapshot.value as! Dictionary<String,String>
+            let name = snapVal["beastie"]
+            let ques = snapVal["question"]
+            let ans = snapVal["answer"]
+            
+            let newCell = BackpackCell()
+            newCell.beastie = name ?? ""
+            newCell.question = ques ?? ""
+            newCell.answer = ans ?? ""
+            self.beasties.append(newCell)
+            self.beastieTable.reloadData()
+        }
     }
-    */
 
+}
+
+extension BackpackInventoryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return beasties.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = beastieTable.dequeueReusableCell(withIdentifier: "BeastieCell", for: indexPath) as! BeastieBackpackCell
+        cell.beastieName.text = beasties[indexPath.row].beastie
+        cell.questionLabel.text = beasties[indexPath.row].question
+        cell.answerLabel.text = beasties[indexPath.row].answer
+        return cell
+    }
+    
 }
