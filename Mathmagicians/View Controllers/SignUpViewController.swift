@@ -19,6 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var errorLabel: UILabel!
     
+    var errorText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,22 +41,33 @@ class SignUpViewController: UIViewController {
                 
                 switch errorCode {
                 case .emailAlreadyInUse?:
-                    self.errorLabel.text = "ERROR: Email Already in Use"
+                    self.errorText = "Email already in use"
                 case .invalidEmail?:
-                    self.errorLabel.text = "ERROR: Email is incorrect format"
+                    self.errorText = "Email is incorrect format"
                 case .wrongPassword?:
-                    self.errorLabel.text = "ERROR: Wrong Password"
+                    self.errorText = "Wrong Password"
                 case .networkError?:
-                    self.errorLabel.text = "ERROR: Network Error"
+                    self.errorText = "Network Error"
                 case .weakPassword?:
-                    self.errorLabel.text = "ERROR: Password must be at least 6 characters"
+                    self.errorText = "Password must be at least 6 characters"
                 default:
-                    self.errorLabel.text = "ERROR: Try Again Later"
+                    self.errorText = "Try Again Later"
                 }
-                self.errorLabel.isHidden = false
-                
+                //self.errorLabel.isHidden = false
+                self.createAlert(title: "Error", message: self.errorText)
             }
+            
         }
+        
+    }
+    
+    func createAlert (title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let action = UIAlertAction(title: "Retry", style: UIAlertAction.Style.default) { (act) in
+            print("Alert dismissed")
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
