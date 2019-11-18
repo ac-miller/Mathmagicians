@@ -14,11 +14,7 @@ class BackpackInventoryViewController: UIViewController {
     let userID = Auth.auth().currentUser?.uid
     var ref = Database.database().reference()
     
-    var beasties: [BackpackCell] = [
-        BackpackCell(beastie: "dragon", question: "1+1", answer: "2"),
-        BackpackCell(beastie: "cat", question: "2+2", answer: "4"),
-        BackpackCell(beastie: "scary", question:"4+4", answer: "8")
-    ]
+    var beasties: [BackpackCell] = [BackpackCell]()
     
     @IBOutlet var beastieTable: UITableView!
     
@@ -28,29 +24,28 @@ class BackpackInventoryViewController: UIViewController {
         retrieveData()
         beastieTable.dataSource = self
         beastieTable.register(UINib(nibName: "BeastieBackpackCell", bundle: nil), forCellReuseIdentifier: "BeastieCell")
+
+
     }
     
-//    func retrieveData() {
-//        let childRef = self.ref.child("users/\(userID!)/beasties")
-//        childRef.observeSingleEvent(of: .value, with: { (snapshot) in
-//          // Get user value
-//            for child in snapshot.children {
-//                let newBeastie = BackpackCell(beastie: child.beastie, question: child.question, answer: child.answer)
-//                if let dbLocation = childSnapshot.value["LocationName"] as? String {
-//                    print(dbLocation)
-//                }
-//            }
-//
-//          // ...
-//          }) { (error) in
-//            print(error.localizedDescription)
-//        }
-//
-//
-//    }
-    
-    
-
+    func retrieveData() {
+        
+        let childRef = self.ref.child("users/\(userID!)/beasties/")
+        
+        childRef.observe(.childAdded) { (snapshot) in
+            let snapVal = snapshot.value as! Dictionary<String,String>
+            let name = snapVal["beastie"]
+            let ques = snapVal["question"]
+            let ans = snapVal["answer"]
+            
+            let newCell = BackpackCell()
+            newCell.beastie = name ?? ""
+            newCell.question = ques ?? ""
+            newCell.answer = ans ?? ""
+            self.beasties.append(newCell)
+            self.beastieTable.reloadData()
+        }
+    }
 
 }
 

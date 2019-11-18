@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct BackpackCell {
-    let beastie: String //asset name
-    let question: String
-    let answer: String
-
+class BackpackCell {
+    var beastie: String = ""//asset name
+    var question: String = ""
+    var answer: String = ""
 }
