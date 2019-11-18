@@ -18,6 +18,7 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var countdownLbl: UILabel!
     
+    @IBOutlet var questionContainer: UIView!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerA: UIButton!
     @IBOutlet var answerB: UIButton!
@@ -97,11 +98,21 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
                 correctAnswer = answer.answerText
             }
         }
-        answerA.setTitle(ques.answers![0].answerText, for: .normal)
-        answerB.setTitle(ques.answers![1].answerText, for: .normal)
-        answerC.setTitle(ques.answers![2].answerText, for: .normal)
-        answerD.setTitle(ques.answers![3].answerText, for: .normal)
+        let ind = [0, 1, 2, 3].shuffled()
+        answerA.setTitle(ques.answers![ind[0]].answerText, for: .normal)
+        answerB.setTitle(ques.answers![ind[1]].answerText, for: .normal)
+        answerC.setTitle(ques.answers![ind[2]].answerText, for: .normal)
+        answerD.setTitle(ques.answers![ind[3]].answerText, for: .normal)
+        formatAnswer(button: answerA)
+        formatAnswer(button: answerB)
+        formatAnswer(button: answerC)
+        formatAnswer(button: answerD)
         
+    }
+    
+    func formatAnswer(button: UIButton) {
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.widthAnchor.constraint(equalTo: questionContainer.widthAnchor, multiplier: 0.4).isActive = true
     }
     
     
@@ -113,8 +124,9 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
             let beastieToShow = ["beastie": beastie!.arImagePath!,
                            "question": questionLabel.text,
                            "answer": correctAnswer]
-
-            self.ref.child("users/\(userID!)/beasties").setValue(beastieToShow)
+            guard let key = self.ref.child("users/\(userID!)/beasties").childByAutoId().key else {return}
+            let childUpdate = ["users/\(userID!)/beasties/\(key)/": beastieToShow]
+            self.ref.updateChildValues(childUpdate)
         }
         else {
             //display failure message
@@ -147,7 +159,7 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
     
     func addBeastie(){
 
-        var beastiePath = beastie!.arImagePath
+        let beastiePath = beastie!.arImagePath
         
         let beastieScene = SCNScene(named: beastiePath! + ".scn", inDirectory: "art.scnassets/")
         
