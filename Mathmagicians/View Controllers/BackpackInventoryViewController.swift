@@ -25,7 +25,11 @@ class BackpackInventoryViewController: UIViewController {
         beastieTable.dataSource = self
         beastieTable.register(UINib(nibName: "BeastieBackpackCell", bundle: nil), forCellReuseIdentifier: "BeastieCell")
 
-
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        let childRef = self.ref.child("users/\(userID!)/beasties/")
+        childRef.removeAllObservers()
     }
     
     func retrieveData() {
@@ -37,7 +41,7 @@ class BackpackInventoryViewController: UIViewController {
             let name = snapVal["beastie"]
             let ques = snapVal["question"]
             let ans = snapVal["answer"]
-            
+
             let newCell = BackpackCell()
             newCell.beastie = name ?? ""
             newCell.question = ques ?? ""
