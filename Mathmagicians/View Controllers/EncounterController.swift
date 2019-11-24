@@ -117,6 +117,9 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
     
     
     @IBAction func testCorrect(_ sender: UIButton) {
+        
+        timer.invalidate()
+        
         if (sender.currentTitle == correctAnswer) {
             //display success message
             createAlert(title: "SUCCESS!", message: "You got that one right!")
