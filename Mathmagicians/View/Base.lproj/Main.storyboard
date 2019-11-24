@@ -239,14 +239,14 @@
             <objects>
                 <viewController storyboardIdentifier="mapPage" id="jAp-ue-o31" customClass="MapExploreController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aqy-yR-UyB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="skO-e6-R4U">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-iO-f49">
-                                <rect key="frame" x="309" y="53" width="50" height="50"/>
+                                <rect key="frame" x="309" y="9" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="BkK-t1-dU7"/>
                                     <constraint firstAttribute="height" constant="50" id="NhE-pL-PIN"/>
@@ -257,7 +257,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4Q-EU-8ol">
-                                <rect key="frame" x="291" y="577" width="68" height="70"/>
+                                <rect key="frame" x="291" y="557" width="68" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="0ia-4T-dMW"/>
                                     <constraint firstAttribute="width" constant="68" id="Zxa-7f-13i"/>
@@ -306,15 +306,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circular-clock" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-a4-Jdp">
                                 <rect key="frame" x="307" y="20" width="52" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="0IG-pn-SdZ"/>
+                                    <constraint firstAttribute="width" constant="52" id="74g-l6-Ffc"/>
                                     <constraint firstAttribute="height" constant="47" id="hwV-zE-MIQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu5-Lg-fLI">
-                                <rect key="frame" x="276" y="33" width="20" height="21"/>
+                                <rect key="frame" x="276.5" y="33" width="19.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="FHj-Zz-BuH"/>
-                                    <constraint firstAttribute="width" constant="20" id="Ucu-9O-tN9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -401,19 +400,15 @@
                             <constraint firstItem="ZJ8-a4-Jdp" firstAttribute="leading" secondItem="Zu5-Lg-fLI" secondAttribute="trailing" constant="11" id="0g4-HX-x17"/>
                             <constraint firstItem="eAO-nS-jAI" firstAttribute="bottom" secondItem="JjZ-jq-l4X" secondAttribute="bottom" id="6c8-Kh-Mfr"/>
                             <constraint firstItem="JjZ-jq-l4X" firstAttribute="trailing" secondItem="ZJ8-a4-Jdp" secondAttribute="trailing" constant="16" id="Au8-fe-5YZ"/>
-                            <constraint firstItem="JjZ-jq-l4X" firstAttribute="trailing" secondItem="ZJ8-a4-Jdp" secondAttribute="trailing" constant="16" id="B01-JC-pM1"/>
                             <constraint firstItem="Oh4-wh-r0i" firstAttribute="leading" secondItem="JjZ-jq-l4X" secondAttribute="leading" id="Bre-KI-myt"/>
                             <constraint firstItem="Oh4-wh-r0i" firstAttribute="trailing" secondItem="JjZ-jq-l4X" secondAttribute="trailing" id="CkC-lO-G8p"/>
+                            <constraint firstItem="Zu5-Lg-fLI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JjZ-jq-l4X" secondAttribute="leading" constant="276.5" id="PdM-h6-SfO"/>
                             <constraint firstItem="Oh4-wh-r0i" firstAttribute="centerX" secondItem="PEc-Ej-pXE" secondAttribute="centerX" id="VrO-FL-CDO"/>
                             <constraint firstItem="eAO-nS-jAI" firstAttribute="leading" secondItem="JjZ-jq-l4X" secondAttribute="leading" id="Xal-Lx-ueK"/>
                             <constraint firstItem="Oh4-wh-r0i" firstAttribute="height" secondItem="eAO-nS-jAI" secondAttribute="height" multiplier="0.333" id="XtQ-Ck-G3A"/>
                             <constraint firstItem="eAO-nS-jAI" firstAttribute="top" secondItem="JjZ-jq-l4X" secondAttribute="top" id="bdf-eN-KOo"/>
-                            <constraint firstItem="ZJ8-a4-Jdp" firstAttribute="leading" secondItem="JjZ-jq-l4X" secondAttribute="leading" constant="307" id="blm-vR-4w4"/>
-                            <constraint firstItem="ZJ8-a4-Jdp" firstAttribute="top" secondItem="JjZ-jq-l4X" secondAttribute="top" constant="20" id="gBd-Nd-B7R"/>
                             <constraint firstItem="Oh4-wh-r0i" firstAttribute="bottom" secondItem="JjZ-jq-l4X" secondAttribute="bottom" id="gqh-2N-GrY"/>
                             <constraint firstItem="ZJ8-a4-Jdp" firstAttribute="top" secondItem="JjZ-jq-l4X" secondAttribute="top" constant="20" id="iNT-ta-ilB"/>
-                            <constraint firstItem="ZJ8-a4-Jdp" firstAttribute="leading" secondItem="Zu5-Lg-fLI" secondAttribute="trailing" constant="11" id="nAK-LT-cSY"/>
-                            <constraint firstItem="Zu5-Lg-fLI" firstAttribute="leading" secondItem="JjZ-jq-l4X" secondAttribute="leading" constant="276" id="p1v-9M-obb"/>
                             <constraint firstItem="Zu5-Lg-fLI" firstAttribute="top" secondItem="JjZ-jq-l4X" secondAttribute="top" constant="33" id="rZ6-rW-gsB"/>
                             <constraint firstItem="eAO-nS-jAI" firstAttribute="trailing" secondItem="JjZ-jq-l4X" secondAttribute="trailing" id="tik-Wh-c8M"/>
                         </constraints>
@@ -441,7 +436,7 @@
             <objects>
                 <viewController id="yus-Ds-B9e" customClass="BackpackInventoryViewController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t6l-cp-QeR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-3b-sve">
@@ -649,6 +644,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P28-uL-xAX"/>
-        <segue reference="DkL-Mk-x27"/>
+        <segue reference="91t-CV-v3N"/>
     </inferredMetricsTieBreakers>
 </document>
