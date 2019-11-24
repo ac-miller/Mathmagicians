@@ -439,13 +439,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-3b-sve">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-3b-sve">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PkZ-3b-sve" firstAttribute="bottom" secondItem="nFb-XO-Yl6" secondAttribute="bottom" id="0b9-QO-zkZ"/>
+                            <constraint firstItem="PkZ-3b-sve" firstAttribute="top" secondItem="nFb-XO-Yl6" secondAttribute="top" id="6sM-gB-KIy"/>
+                            <constraint firstItem="PkZ-3b-sve" firstAttribute="trailing" secondItem="nFb-XO-Yl6" secondAttribute="trailing" id="742-SG-EPF"/>
+                            <constraint firstItem="PkZ-3b-sve" firstAttribute="leading" secondItem="nFb-XO-Yl6" secondAttribute="leading" id="WQB-lM-Aq9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nFb-XO-Yl6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Beastie Backpack" id="Hpz-a0-jYv"/>
