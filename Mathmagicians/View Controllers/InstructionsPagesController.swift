@@ -15,6 +15,8 @@ class InstructionsPagesController : UIPageViewController {
         return [
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct1"),
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct2")
+        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct3"),
+        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct4")
         ]
     }()
     

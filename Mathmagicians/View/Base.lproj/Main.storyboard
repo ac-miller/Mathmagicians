@@ -483,10 +483,18 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightGreen" translatesAutoresizingMaskIntoConstraints="NO" id="e30-Mi-xdW">
                                 <rect key="frame" x="-34" y="-40" width="443" height="747"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is instructions page 1, swipe to go to next page" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkL-F2-9Yq">
-                                <rect key="frame" x="72" y="269" width="231" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Mathmagicians!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLp-Sg-L8s">
+                                <rect key="frame" x="79" y="104" width="217" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You'll be able to practice math while exploring the world" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jk7-wy-e0Y">
+                                <rect key="frame" x="54" y="334" width="266" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -494,12 +502,8 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="e30-Mi-xdW" secondAttribute="bottom" constant="-40" id="JG0-fx-lWa"/>
                             <constraint firstItem="e30-Mi-xdW" firstAttribute="leading" secondItem="910-aG-aRw" secondAttribute="leading" constant="-34" id="OvA-2L-tXt"/>
-                            <constraint firstItem="NkL-F2-9Yq" firstAttribute="centerX" secondItem="e30-Mi-xdW" secondAttribute="centerX" id="X8m-VH-job"/>
                             <constraint firstItem="e30-Mi-xdW" firstAttribute="top" secondItem="910-aG-aRw" secondAttribute="top" constant="-40" id="hw5-Hr-iU0"/>
                             <constraint firstAttribute="trailing" secondItem="e30-Mi-xdW" secondAttribute="trailing" constant="-34" id="iu2-R1-bOD"/>
-                            <constraint firstItem="NkL-F2-9Yq" firstAttribute="centerY" secondItem="e30-Mi-xdW" secondAttribute="centerY" id="kRV-yh-WP8"/>
-                            <constraint firstItem="NkL-F2-9Yq" firstAttribute="leading" secondItem="YUw-Ua-gjM" secondAttribute="leading" constant="72" id="rqZ-4i-HBd"/>
-                            <constraint firstItem="NkL-F2-9Yq" firstAttribute="top" secondItem="YUw-Ua-gjM" secondAttribute="top" constant="269" id="xuq-WC-opo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YUw-Ua-gjM"/>
                     </view>
@@ -519,21 +523,37 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightGreen" translatesAutoresizingMaskIntoConstraints="NO" id="CAl-Of-uHJ">
                                 <rect key="frame" x="-33" y="-40" width="443" height="747"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is instructions page 2, swipe to go to game map" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDL-0M-0rc">
-                                <rect key="frame" x="74" y="232" width="228" height="202"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The challenge is greater for certain color beasties, giving you bragging rights!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9J-gZ-sXf">
+                                <rect key="frame" x="59" y="387" width="271" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a beastie. They challenge you to a math problem in order to capture them." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDL-0M-0rc">
+                                <rect key="frame" x="53" y="232" width="271" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="easyGreenMonster" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-jV-mg2">
+                                <rect key="frame" x="74" y="96" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mediumBlueMonster" translatesAutoresizingMaskIntoConstraints="NO" id="R0c-zd-SZr">
+                                <rect key="frame" x="66" y="325" width="130" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hardRedMonster" translatesAutoresizingMaskIntoConstraints="NO" id="iBb-UC-m0r">
+                                <rect key="frame" x="184" y="325" width="130" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nDL-0M-0rc" firstAttribute="centerY" secondItem="CAl-Of-uHJ" secondAttribute="centerY" id="27F-PA-kit"/>
-                            <constraint firstItem="nDL-0M-0rc" firstAttribute="top" secondItem="txs-sz-QWe" secondAttribute="top" constant="232" id="8aY-uw-h5d"/>
-                            <constraint firstItem="nDL-0M-0rc" firstAttribute="centerX" secondItem="CAl-Of-uHJ" secondAttribute="centerX" id="EZr-Fg-OtG"/>
                             <constraint firstItem="CAl-Of-uHJ" firstAttribute="leading" secondItem="8NM-XK-29c" secondAttribute="leading" constant="-33" id="MKN-qC-4TV"/>
                             <constraint firstItem="CAl-Of-uHJ" firstAttribute="top" secondItem="8NM-XK-29c" secondAttribute="top" constant="-40" id="NrL-AR-v3E"/>
-                            <constraint firstItem="nDL-0M-0rc" firstAttribute="leading" secondItem="txs-sz-QWe" secondAttribute="leading" constant="74" id="Ufg-sM-rrH"/>
                             <constraint firstAttribute="trailing" secondItem="CAl-Of-uHJ" secondAttribute="trailing" constant="-35" id="ZfS-Qw-Jx1"/>
                             <constraint firstAttribute="bottom" secondItem="CAl-Of-uHJ" secondAttribute="bottom" constant="-40" id="w5G-Dg-5QI"/>
                         </constraints>
@@ -639,13 +659,91 @@
             </objects>
             <point key="canvasLocation" x="909.60000000000002" y="25.637181409295355"/>
         </scene>
+        <!--Game Instructions Controller-->
+        <scene sceneID="8An-Yh-B5w">
+            <objects>
+                <viewController storyboardIdentifier="Instruct3" id="6YZ-8u-Nan" customClass="GameInstructionsController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vvX-i2-baI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightGreen" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-X6-TU1">
+                                <rect key="frame" x="-33" y="-40" width="443" height="747"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You'll find them walking around your neighborhood, and they'll challenge you if you are close enough" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCV-Lt-fUq">
+                                <rect key="frame" x="48" y="396" width="280" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MapExample" translatesAutoresizingMaskIntoConstraints="NO" id="B9n-CS-XY8">
+                                <rect key="frame" x="48" y="20" width="280" height="405"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="d1n-X6-TU1" secondAttribute="bottom" constant="-40" id="0hX-Xa-j5h"/>
+                            <constraint firstItem="d1n-X6-TU1" firstAttribute="leading" secondItem="vvX-i2-baI" secondAttribute="leading" constant="-33" id="32R-dB-KSn"/>
+                            <constraint firstAttribute="trailing" secondItem="d1n-X6-TU1" secondAttribute="trailing" constant="-35" id="UIb-Cx-y7w"/>
+                            <constraint firstItem="d1n-X6-TU1" firstAttribute="top" secondItem="vvX-i2-baI" secondAttribute="top" constant="-40" id="jrn-o6-8jK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zh8-3e-OtQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8J-0S-XnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7141.6000000000004" y="-308.09595202398805"/>
+        </scene>
+        <!--Game Instructions Controller-->
+        <scene sceneID="TJO-Ad-9Rc">
+            <objects>
+                <viewController storyboardIdentifier="Instruct4" id="e14-Tk-wlV" customClass="GameInstructionsController" customModule="Mathmagicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ffD-bp-ZYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightGreen" translatesAutoresizingMaskIntoConstraints="NO" id="rBF-Ve-VTd">
+                                <rect key="frame" x="-33" y="-40" width="443" height="747"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Once you see the beastie, you only have a short time to answer their challenge! Good Luck!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeL-pA-ipq">
+                                <rect key="frame" x="48" y="396" width="280" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MapExample" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-Vx-KU1">
+                                <rect key="frame" x="48" y="20" width="280" height="405"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rBF-Ve-VTd" secondAttribute="bottom" constant="-40" id="2RF-Ni-rGy"/>
+                            <constraint firstItem="rBF-Ve-VTd" firstAttribute="leading" secondItem="ffD-bp-ZYh" secondAttribute="leading" constant="-33" id="HCg-GY-mxR"/>
+                            <constraint firstItem="rBF-Ve-VTd" firstAttribute="top" secondItem="ffD-bp-ZYh" secondAttribute="top" constant="-40" id="bsk-DZ-Q0o"/>
+                            <constraint firstAttribute="trailing" secondItem="rBF-Ve-VTd" secondAttribute="trailing" constant="-35" id="hsc-Dp-I0c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BnV-E5-QmO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SxD-en-hQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7854" y="-308"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="MapExample" width="708" height="1308"/>
         <image name="backpack" width="96" height="96"/>
         <image name="circular-clock" width="512" height="512"/>
         <image name="compass" width="512" height="512"/>
+        <image name="easyGreenMonster" width="512" height="512"/>
+        <image name="hardRedMonster" width="512" height="512"/>
         <image name="launch" width="1000" height="1000"/>
         <image name="lightGreen" width="640" height="1136"/>
+        <image name="mediumBlueMonster" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P28-uL-xAX"/>
