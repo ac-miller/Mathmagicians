@@ -14,7 +14,7 @@ class InstructionsPagesController : UIPageViewController {
     lazy var pageCollection : [UIViewController] = {
         return [
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct1"),
-        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct2")
+        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct2"),
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct3"),
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct4")
         ]
