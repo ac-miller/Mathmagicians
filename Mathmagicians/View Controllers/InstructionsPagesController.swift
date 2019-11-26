@@ -20,6 +20,7 @@ class InstructionsPagesController : UIPageViewController {
         ]
     }()
 
+    let pageControl = UIPageControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,14 @@ class InstructionsPagesController : UIPageViewController {
             setViewControllers([initialPage], direction: .forward, animated: true, completion: nil)
         }
         
+        showDots()
     }
     
+    func showDots() {
+        pageControl.pageIndicatorTintColor = UIColor.gray
+        pageControl.currentPageIndicatorTintColor = UIColor.white
+        pageControl.backgroundColor = UIColor.darkGray
+    }
     
     
     
@@ -76,9 +83,8 @@ extension InstructionsPagesController : UIPageViewControllerDataSource {
         
         guard nextIndex < pageCollection.count
             else {
-                //if reached end, go to the map to start the game
-                
-                return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mapPage")
+                //if reached end, back to the beginning
+                return pageCollection[0]
         }
         
         return pageCollection[nextIndex]
@@ -90,6 +96,13 @@ extension InstructionsPagesController : UIPageViewControllerDataSource {
 
 extension InstructionsPagesController : UIPageViewControllerDelegate {
     
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return pageCollection.count
+    }
 }
 
 
