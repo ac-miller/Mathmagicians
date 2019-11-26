@@ -102,12 +102,20 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         }
         
         // Do any additional setup after loading the view, typically from a nib.
+        //set dark mode
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            // Fallback on earlier versions
+            //Do nothing because old iOS doesn't support dark mode
+        }
 
         
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
+//
 //        navigationController?.setNavigationBarHidden(true, animated: true)
 //    }
 //

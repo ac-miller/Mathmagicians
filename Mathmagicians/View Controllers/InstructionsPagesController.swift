@@ -19,6 +19,7 @@ class InstructionsPagesController : UIPageViewController {
         UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Instruct4")
         ]
     }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +31,17 @@ class InstructionsPagesController : UIPageViewController {
         {
             setViewControllers([initialPage], direction: .forward, animated: true, completion: nil)
         }
+        
     }
-
+    
+    
+    
     
 }
 
 extension InstructionsPagesController : UIPageViewControllerDataSource {
+    
+
     
     //sets the previous view controller in the page view controller
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -71,13 +77,13 @@ extension InstructionsPagesController : UIPageViewControllerDataSource {
         guard nextIndex < pageCollection.count
             else {
                 //if reached end, go to the map to start the game
+                
                 return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mapPage")
         }
         
         return pageCollection[nextIndex]
         
     }
-    
     
     
 }
