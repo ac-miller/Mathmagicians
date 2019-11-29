@@ -1,9 +1,10 @@
 //
 //  MapExploreController.swift
-//  Mathmagicians
+//  Description: Setup for rendering map per user location, &
+//               setup of difficulty level for selection by the user
+//               so that the math questions and beasties can be displayed accordingly
 //
-//  Created by Jesse Chan on 10/26/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import UIKit
@@ -34,7 +35,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         //showing user on map with animation
         self.mapView.setRegion(region, animated: true)
     }
-    
+    // segue to backpack page so that the updated scoreboard of beasties collected is displayed
     @IBAction func backpackButtonPressed(_ sender: UIButton) {
         //sends the user to the backpack screen through segue
         performSegue(withIdentifier: "backpackSegue", sender: nil)
@@ -47,7 +48,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
             vc?.beastie = beastie
         }
     }
-    
+    // to link the correlated file of beasties with the color selected by the user
     func readBeasties() throws -> [Beastie] {
         guard
             let fileUrl = Bundle.main.url(forResource: "beasties", withExtension: "json"),
@@ -101,7 +102,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
             self.manager.requestWhenInUseAuthorization()
         }
         
-        // Do any additional setup after loading the view, typically from a nib.
+        
         //set dark mode
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .dark
@@ -112,17 +113,6 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
 
         
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        navigationController?.setNavigationBarHidden(true, animated: true)
-//    }
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: true)
-//    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -141,12 +131,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
             beastie = beasties[difficulty]
             annotationView.image = UIImage(named: beastie!.imageOnMap!)
         }
-//            annotationView.image = UIImage(named: "easyGreenMonster")
-//        } else if difficulty == 2 {
-//            annotationView.image = UIImage(named: "mediumBlueMonster")
-//        } else {
-//            annotationView.image = UIImage(named: "hardRedMonster")
-//        }
+
         
         var newFrame = annotationView.frame
         newFrame.size.height = 40
