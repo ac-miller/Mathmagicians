@@ -1,9 +1,8 @@
 //
 //  SignUpViewController.swift
-//  Mathmagicians
+//  Description: UI and checking for registering user accounts
 //
-//  Created by Jesse Chan on 10/12/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import UIKit
