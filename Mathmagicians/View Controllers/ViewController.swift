@@ -1,9 +1,8 @@
 //
 //  ViewController.swift
-//  Mathmagicians
+//  Description: Boiler plate code for UI
 //
-//  Created by Jesse Chan on 10/12/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import UIKit
