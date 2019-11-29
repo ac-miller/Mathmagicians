@@ -1,9 +1,8 @@
-//
-//  encounterController.swift
-//  Mathmagicians
-//
-//  Created by Jesse Chan on 11/3/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  EncounterController.swift
+//  Description: Main game logic with AR beasties and math question displayed on screen based on difficulty
+//               selected by the player on the map page
+//  
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import UIKit
@@ -50,7 +49,7 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
-    
+    // displayed on screen
     override func viewDidLoad() {
        
         super.viewDidLoad()
@@ -159,7 +158,7 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
             //performSegue(withIdentifier: "backToMap", sender: nil)
         }
     }
-    
+    // to add beasties on screen that is correlated with user selection of beastie on map page
     func addBeastie(){
 
         let beastiePath = beastie!.arImagePath
@@ -176,7 +175,7 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        // allows for tracking when the user moves around
         let configuration = ARWorldTrackingConfiguration()
         
         sceneView.session.run(configuration)
