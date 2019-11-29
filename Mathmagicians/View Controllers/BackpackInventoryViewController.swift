@@ -1,9 +1,8 @@
 //
 //  BackpackInventoryViewController.swift
-//  Mathmagicians
-//
-//  Created by Aaron Miller on 10/31/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  Description: Tracks the number of beasties collected by the player based
+//               on correct answers to the math questions presented to the user
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import UIKit
