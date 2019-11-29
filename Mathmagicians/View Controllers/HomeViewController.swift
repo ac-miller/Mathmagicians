@@ -2,7 +2,6 @@
 //  HomeViewController.swift
 //  Description: UI setup to render home page
 //
-//  
 //  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
