@@ -2,6 +2,8 @@
 CS467 Capstone Project
 
 
-## Information for the general public
+An augmented reality math game that uses Apple's ARKit and SwiftUI. 
 
-Please do not add to this repository, it is a work-in-progress class project
+While a player explores their world through on their physical iOS device, random beasts show up on the map near their location.  The beasts can be captured provided the player can solve the math problem presented to them.  A timer adds an extra challenge to the game.
+
+
