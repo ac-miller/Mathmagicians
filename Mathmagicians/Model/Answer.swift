@@ -1,9 +1,8 @@
 //
 //  Answer.swift
-//  Mathmagicians
+//  Description: Storing the answers by question ID
 //
-//  Created by Aaron Miller on 10/27/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import Foundation
