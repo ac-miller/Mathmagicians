@@ -1,9 +1,10 @@
 //
 //  Beastie.swift
-//  Mathmagicians
+//  Description: Defining the rendering of beasties based on selection by levels selected
+//               by the user on the map page
 //
-//  Created by Aaron Miller on 10/31/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import Foundation
@@ -12,11 +13,12 @@ class Beastie : Codable {
     var imageOnMap: String?
     var arImagePath: String?
     
+    //defing the path to get the beasties
     enum CodingKeys: String, CodingKey {
         case imageOnMap = "imageOnMap"
         case arImagePath = "arImagePath"
     }
-    
+    //initializing
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.imageOnMap = try container.decode(String.self, forKey: .imageOnMap)
