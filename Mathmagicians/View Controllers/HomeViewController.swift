@@ -1,9 +1,9 @@
 //
 //  HomeViewController.swift
-//  Mathmagicians
+//  Description: UI setup to render home page
 //
-//  Created by Jesse Chan on 10/12/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
