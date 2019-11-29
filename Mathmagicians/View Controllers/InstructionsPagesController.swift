@@ -1,9 +1,8 @@
 //
 //  InstructionsPagesController.swift
-//  Mathmagicians
+//  Description: UI set up to display game instructions
 //
-//  Created by Aaron Miller on 11/3/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  Copyright © 2019  Mathmagicians. All rights reserved.
 //
 
 import UIKit
