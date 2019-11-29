@@ -1,9 +1,9 @@
 //
 //  Question.swift
-//  Mathmagicians
+//  Description: Defining the questions by difficulty levels
 //
-//  Created by Aaron Miller on 10/27/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import Foundation
