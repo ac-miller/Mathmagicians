@@ -1,9 +1,8 @@
 //
 //  BackpackCell.swift
-//  Mathmagicians
+//  Description:  To track the collection of beasties by the user
 //
-//  Created by Aaron Miller on 11/17/19.
-//  Copyright © 2019 Jesse Chan. All rights reserved.
+//  Copyright © 2019 Mathmagicians. All rights reserved.
 //
 
 import Foundation
