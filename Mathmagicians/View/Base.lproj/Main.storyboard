@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8C-Jp-GIz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8C-Jp-GIz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,6 +25,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9p-h7-b5u">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="SIGN UP"/>
                                         <connections>
                                             <segue destination="Otu-1v-4U7" kind="show" identifier="goToSignUp" id="6oc-kt-OF1"/>
@@ -36,6 +37,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Eh2-Id-5yZ"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="LOGIN"/>
                                         <connections>
                                             <segue destination="553-XU-YaH" kind="show" identifier="goToLogin" id="ai4-e5-Dhw"/>
@@ -123,6 +125,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="RCI-66-QYr"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="SIGN UP"/>
                                         <connections>
                                             <action selector="signupPressed:" destination="Otu-1v-4U7" eventType="touchUpInside" id="N24-ie-Kyf"/>
@@ -191,6 +194,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g92-Zi-Jwz">
                                         <rect key="frame" x="0.0" y="40" width="125" height="40"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                         <state key="normal" title="Game Instructions"/>
                                         <connections>
                                             <segue destination="jj1-ml-Oq1" kind="show" id="P28-uL-xAX"/>
@@ -198,6 +202,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-w1-Y4a">
                                         <rect key="frame" x="0.0" y="80" width="125" height="40"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="Start Game"/>
                                         <connections>
                                             <segue destination="jAp-ue-o31" kind="show" id="DkL-Mk-x27"/>
@@ -205,6 +210,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-vo-CNj">
                                         <rect key="frame" x="0.0" y="120" width="125" height="40"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="Log Out"/>
                                         <connections>
                                             <action selector="logOutPressed:" destination="N1w-8Y-mr9" eventType="touchUpInside" id="3Oy-Ou-Mub"/>
@@ -513,7 +519,7 @@
                                     <constraint firstAttribute="width" constant="271" id="PvO-CT-RKJ"/>
                                     <constraint firstAttribute="height" constant="67" id="tcJ-8Q-NxL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -523,7 +529,7 @@
                                     <constraint firstAttribute="height" constant="67" id="G8W-02-O0V"/>
                                     <constraint firstAttribute="width" constant="271" id="xtU-zB-f6d"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -580,7 +586,7 @@
                                 <rect key="frame" x="-35" y="-41" width="443" height="747"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iCy-kX-IIw">
-                                <rect key="frame" x="40" y="84" width="295" height="250.5"/>
+                                <rect key="frame" x="40" y="84" width="295" height="253.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-xr-Tfx">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
@@ -601,20 +607,22 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8L1-Za-MVQ"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="LOGIN"/>
                                         <connections>
                                             <action selector="loginPressed:" destination="553-XU-YaH" eventType="touchUpInside" id="7Yw-QO-k7L"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SB9-DD-ssi">
-                                        <rect key="frame" x="0.0" y="180" width="295" height="30"/>
+                                        <rect key="frame" x="0.0" y="180" width="295" height="33"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
                                             <action selector="forgotPassword:" destination="553-XU-YaH" eventType="touchUpInside" id="7ng-Hk-eeO"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZt-6D-tm8">
-                                        <rect key="frame" x="0.0" y="230" width="295" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="233" width="295" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -681,7 +689,7 @@
                                     <constraint firstAttribute="width" constant="280" id="ipQ-Nx-mXZ"/>
                                     <constraint firstAttribute="height" constant="157" id="son-48-Ec3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -720,7 +728,7 @@
                                     <constraint firstAttribute="width" constant="280" id="Pxd-Nf-Srl"/>
                                     <constraint firstAttribute="height" constant="157" id="bHs-xs-Dag"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
