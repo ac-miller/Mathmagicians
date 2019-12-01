@@ -197,7 +197,7 @@
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                         <state key="normal" title="Start Game"/>
                                         <connections>
-                                            <segue destination="jAp-ue-o31" kind="show" id="DkL-Mk-x27"/>
+                                            <segue destination="jAp-ue-o31" kind="show" identifier="startGame" id="DkL-Mk-x27"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-vo-CNj">
@@ -732,7 +732,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapExample" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-Vx-KU1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arScreen" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-Vx-KU1">
                                 <rect key="frame" x="82.5" y="40" width="210" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="FZW-EM-hdO"/>
@@ -756,6 +756,7 @@
     </scenes>
     <resources>
         <image name="MapExample" width="708" height="1308"/>
+        <image name="arScreen" width="359" height="640"/>
         <image name="backpack" width="96" height="96"/>
         <image name="circular-clock" width="512" height="512"/>
         <image name="compass" width="512" height="512"/>

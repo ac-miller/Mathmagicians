@@ -56,7 +56,7 @@ class EncounterController: UIViewController, ARSCNViewDelegate {
 
         sceneView.delegate = self
 
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
 
         let scene = SCNScene()
 

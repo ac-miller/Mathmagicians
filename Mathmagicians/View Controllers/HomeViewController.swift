@@ -39,4 +39,11 @@ class HomeViewController: UIViewController {
         
     }
     
+    //setting the next nav bar to say Menu instead of Back
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Menu"
+        navigationItem.backBarButtonItem = backItem
+    }
+    
 }
