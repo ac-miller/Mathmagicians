@@ -12,6 +12,7 @@
 		40161F07236521AB0004B7C1 /* MapExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40161F06236521AB0004B7C1 /* MapExploreController.swift */; };
 		408B60EA236E469C007A6D4B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 408B60E9236E469C007A6D4B /* art.scnassets */; };
 		408B60EC236F7CE3007A6D4B /* EncounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B60EB236F7CE3007A6D4B /* EncounterController.swift */; };
+		40A7B1772394702700A644E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40A7B1762394702700A644E0 /* GoogleService-Info.plist */; };
 		40B403EC2352CED4002A037A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B403EB2352CED4002A037A /* AppDelegate.swift */; };
 		40B403EE2352CED4002A037A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B403ED2352CED4002A037A /* ViewController.swift */; };
 		40B403F12352CED4002A037A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B403EF2352CED4002A037A /* Main.storyboard */; };
@@ -30,7 +31,6 @@
 		5B88F5322381F572005E59B5 /* BackpackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88F5312381F572005E59B5 /* BackpackCell.swift */; };
 		5B88F5352381FB5C005E59B5 /* BeastieBackpackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88F5332381FB5C005E59B5 /* BeastieBackpackCell.swift */; };
 		5B88F5362381FB5C005E59B5 /* BeastieBackpackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88F5342381FB5C005E59B5 /* BeastieBackpackCell.xib */; };
-		5B88F5382382615D005E59B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B88F5372382615C005E59B5 /* GoogleService-Info.plist */; };
 		5BC7B244236F4F7D00E01686 /* InstructionsPagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */; };
 		5BC7B248236F8DBA00E01686 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC7B247236F8DBA00E01686 /* ARKit.framework */; };
 		B0915B737845DD1B4052401F /* Pods_Mathmagicians.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469B6A8450C6BFDA8B44E55 /* Pods_Mathmagicians.framework */; };
@@ -42,6 +42,7 @@
 		40161F06236521AB0004B7C1 /* MapExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExploreController.swift; sourceTree = "<group>"; };
 		408B60E9236E469C007A6D4B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		408B60EB236F7CE3007A6D4B /* EncounterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterController.swift; sourceTree = "<group>"; };
+		40A7B1762394702700A644E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40B403E82352CED4002A037A /* Mathmagicians.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathmagicians.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B403EB2352CED4002A037A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40B403ED2352CED4002A037A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		5B88F5312381F572005E59B5 /* BackpackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackpackCell.swift; sourceTree = "<group>"; };
 		5B88F5332381FB5C005E59B5 /* BeastieBackpackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastieBackpackCell.swift; sourceTree = "<group>"; };
 		5B88F5342381FB5C005E59B5 /* BeastieBackpackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeastieBackpackCell.xib; sourceTree = "<group>"; };
-		5B88F5372382615C005E59B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BC7B243236F4F7D00E01686 /* InstructionsPagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPagesController.swift; sourceTree = "<group>"; };
 		5BC7B247236F8DBA00E01686 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		62A2A81153C254CFE4204F99 /* Pods-Mathmagicians.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathmagicians.debug.xcconfig"; path = "Target Support Files/Pods-Mathmagicians/Pods-Mathmagicians.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				40B403F52352CED4002A037A /* Assets.xcassets */,
 				408B60E9236E469C007A6D4B /* art.scnassets */,
 				40B403EB2352CED4002A037A /* AppDelegate.swift */,
-				5B88F5372382615C005E59B5 /* GoogleService-Info.plist */,
+				40A7B1762394702700A644E0 /* GoogleService-Info.plist */,
 				40B403F72352CED4002A037A /* LaunchScreen.storyboard */,
 				40B403FA2352CED4002A037A /* Info.plist */,
 			);
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B403F92352CED4002A037A /* LaunchScreen.storyboard in Resources */,
-				5B88F5382382615D005E59B5 /* GoogleService-Info.plist in Resources */,
+				40A7B1772394702700A644E0 /* GoogleService-Info.plist in Resources */,
 				40B403F62352CED4002A037A /* Assets.xcassets in Resources */,
 				5B866400236BC13300EAC035 /* beasties.json in Resources */,
 				408B60EA236E469C007A6D4B /* art.scnassets in Resources */,

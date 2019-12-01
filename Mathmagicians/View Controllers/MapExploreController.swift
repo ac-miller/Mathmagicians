@@ -153,7 +153,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         }
         
         //setting distance and if user is close enough to capture
-        let region = MKCoordinateRegion(center: view.annotation!.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        let region = MKCoordinateRegion(center: view.annotation!.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
         
         //showing user on map with animation
         self.mapView.setRegion(region, animated: false)
