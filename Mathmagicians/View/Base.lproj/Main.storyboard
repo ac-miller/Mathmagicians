@@ -162,7 +162,7 @@
                         <outlet property="emailTextField" destination="rQH-oU-xLC" id="s0P-OG-zDC"/>
                         <outlet property="errorLabel" destination="br4-Mg-Rxe" id="Imr-6t-DHs"/>
                         <outlet property="passwordTextField" destination="YCY-gN-a5J" id="OBL-Ok-JJG"/>
-                        <segue destination="jj1-ml-Oq1" kind="show" identifier="signedSuccess" id="2ex-in-0co"/>
+                        <segue destination="N1w-8Y-mr9" kind="show" identifier="signedSuccess" id="TtM-PM-Llj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBM-j1-zxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -227,6 +227,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MdQ-bw-0GE"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2Ln-jk-kti"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-G5-eh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSd-CZ-iOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4415" y="459"/>
+            <point key="canvasLocation" x="4412" y="122"/>
         </scene>
         <!--Encounter Controller-->
         <scene sceneID="e2V-R3-hp4">
@@ -422,12 +423,11 @@
                         <outlet property="questionContainer" destination="Oh4-wh-r0i" id="IsJ-Ns-Pk3"/>
                         <outlet property="questionLabel" destination="JsY-as-kQ5" id="UY4-fe-wdB"/>
                         <outlet property="sceneView" destination="eAO-nS-jAI" id="YVb-Qm-pch"/>
-                        <segue destination="jAp-ue-o31" kind="show" identifier="backToMap" id="91t-CV-v3N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppz-Y4-Chx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4349.6000000000004" y="1206.7466266866568"/>
+            <point key="canvasLocation" x="4412" y="901"/>
         </scene>
         <!--Beastie Backpack-->
         <scene sceneID="Nzp-gK-fcL">
@@ -458,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEs-RE-Wrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5311.1999999999998" y="434.93253373313348"/>
+            <point key="canvasLocation" x="5417" y="122"/>
         </scene>
         <!--Instructions Pages Controller-->
         <scene sceneID="CC5-a1-8eX">
@@ -468,7 +468,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwg-BL-axf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4786" y="-308"/>
+            <point key="canvasLocation" x="1849" y="731"/>
         </scene>
         <!--Game Instructions Controller-->
         <scene sceneID="gxa-gg-JLH">
@@ -503,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1p-xY-T1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5560.8000000000002" y="-308.09595202398805"/>
+            <point key="canvasLocation" x="702" y="1337"/>
         </scene>
         <!--Game Instructions Controller-->
         <scene sceneID="P86-6U-7o1">
@@ -572,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahb-am-M4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6356" y="-308.09595202398805"/>
+            <point key="canvasLocation" x="1497" y="1337"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="g8Q-je-rlG">
@@ -712,7 +712,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8J-0S-XnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7141.6000000000004" y="-308.09595202398805"/>
+            <point key="canvasLocation" x="2282" y="1337"/>
         </scene>
         <!--Game Instructions Controller-->
         <scene sceneID="TJO-Ad-9Rc">
@@ -751,7 +751,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SxD-en-hQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7853.6000000000004" y="-308.09595202398805"/>
+            <point key="canvasLocation" x="2994" y="1337"/>
         </scene>
     </scenes>
     <resources>
@@ -767,7 +767,6 @@
         <image name="mediumBlueMonster" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2ex-in-0co"/>
-        <segue reference="DkL-Mk-x27"/>
+        <segue reference="TtM-PM-Llj"/>
     </inferredMetricsTieBreakers>
 </document>
