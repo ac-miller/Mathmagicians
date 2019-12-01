@@ -14,6 +14,8 @@ class SignUpViewController: UIViewController {
     //by using the return userID from auth.createuser
     //we can store them in a subdatabase
     
+    @IBOutlet var firstName: UITextField!
+    @IBOutlet var lastName: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var errorLabel: UILabel!
@@ -34,6 +36,13 @@ class SignUpViewController: UIViewController {
             (user, error) in
             if error == nil {
                 print("Registration Successful")
+                //store names
+                let ref = Database.database().reference()
+                let userID = Auth.auth().currentUser?.uid
+                let name = ["first": self.firstName.text!, "last": self.lastName.text!]
+                let childUpdate = ["users/\(userID!)/name/": name]
+                ref.updateChildValues(childUpdate)
+                
                 self.performSegue(withIdentifier: "signedSuccess", sender: nil)
             } else {
                 let errorCode = AuthErrorCode(rawValue: error!._code)
@@ -68,5 +77,4 @@ class SignUpViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
-    
 }

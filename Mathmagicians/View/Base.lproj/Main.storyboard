@@ -161,6 +161,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="rQH-oU-xLC" id="s0P-OG-zDC"/>
                         <outlet property="errorLabel" destination="br4-Mg-Rxe" id="Imr-6t-DHs"/>
+                        <outlet property="firstName" destination="qvN-5S-qc9" id="rxw-S1-K78"/>
+                        <outlet property="lastName" destination="0bx-R1-EVS" id="U7i-jp-Hfa"/>
                         <outlet property="passwordTextField" destination="YCY-gN-a5J" id="OBL-Ok-JJG"/>
                         <segue destination="N1w-8Y-mr9" kind="show" identifier="signedSuccess" id="TtM-PM-Llj"/>
                     </connections>
@@ -228,6 +230,9 @@
                         <viewLayoutGuide key="safeArea" id="MdQ-bw-0GE"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Ln-jk-kti"/>
+                    <connections>
+                        <outlet property="greetingText" destination="1bX-kf-0c3" id="g9X-zO-WPz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-G5-eh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
