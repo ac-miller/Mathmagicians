@@ -201,4 +201,18 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         
 
     }
+    
+    //implement method to allow location tracking right after permission granted
+    private func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted, .denied:
+            break
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+            break
+        default:
+            manager.startUpdatingLocation()
+            break
+        }
+    }
 }
