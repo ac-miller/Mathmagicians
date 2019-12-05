@@ -60,6 +60,35 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         return try! JSONDecoder().decode([Beastie].self, from: jsonData)
     }
     
+    func gameSetup(){
+        beasties = try! readBeasties()
+        
+        self.mapView.delegate = self
+        
+        self.mapView.showsUserLocation = true
+        
+        //to update user location as they move
+        self.manager.startUpdatingLocation()
+        
+        
+        //randomly placing annotation on the map (annotation represents monsters)
+        Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { (timer) in
+            
+            if let coordinate = self.manager.location?.coordinate {
+                
+                let annotation = MKPointAnnotation()
+                
+                annotation.coordinate = coordinate
+                
+                annotation.coordinate.latitude += (Double(arc4random_uniform(1000)) - 500) / 300000.0
+                annotation.coordinate.longitude += (Double(arc4random_uniform(1000)) - 500) / 300000.0
+                
+                self.mapView.addAnnotation(annotation)
+            }
+        
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,36 +97,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         
         //setting up location authorization status
         //if the authorization status has been set, then we are clear to show user location on the map
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            
-            beasties = try! readBeasties()
-            
-            self.mapView.delegate = self
-            
-            self.mapView.showsUserLocation = true
-            
-            //to update user location as they move
-            self.manager.startUpdatingLocation()
-            
-            
-            //randomly placing annotation on the map (annotation represents monsters)
-            Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { (timer) in
-                
-                if let coordinate = self.manager.location?.coordinate {
-                    
-                    let annotation = MKPointAnnotation()
-                    
-                    annotation.coordinate = coordinate
-                    
-                    annotation.coordinate.latitude += (Double(arc4random_uniform(1000)) - 500) / 300000.0
-                    annotation.coordinate.longitude += (Double(arc4random_uniform(1000)) - 500) / 300000.0
-                    
-                    self.mapView.addAnnotation(annotation)
-                }
-            
-            })
-            //if we do not have authorization, then request access from user
-        } else {
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             //only asks the user for location request when the app is in use
             self.manager.requestWhenInUseAuthorization()
         }
@@ -113,6 +113,7 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
 
         
     }
+    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -200,5 +201,20 @@ class MapExploreController: UIViewController, CLLocationManagerDelegate, MKMapVi
         }
         
 
+    }
+    
+    //implement method to allow location tracking right after permission granted
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted, .denied:
+            break
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+            break
+        default:
+            gameSetup()
+            manager.startUpdatingLocation()
+            break
+        }
     }
 }
